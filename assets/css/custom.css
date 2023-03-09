@@ -3,11 +3,11 @@
             }
             
             body[data-sidebar=dark] .mm-active .active i {
-                color: #54becc!important;
+                color: #2fb895!important;
             }
             
             body[data-sidebar=dark] .mm-active .active {
-                color: #56becc!important;
+                color: #2fb895!important;
             }
             
             .breadcrumb-item+.breadcrumb-item::before {
@@ -753,11 +753,11 @@
             }
             
             body[data-sidebar=dark] .navbar-brand-box {
-                background: #0e132c;
+                background: #1B1F24;
             }
             
             body[data-sidebar=dark] .vertical-menu {
-                background: #0d1125;
+                background: #121418;
             }
             
             .navbar-brand-box .logo-sm {
@@ -767,7 +767,7 @@
             }
             
             body[data-sidebar=dark].vertical-collpsed .vertical-menu #sidebar-menu>ul ul {
-                background-color: #0e132c;
+                background-color: #1B1F24;
             }
             
             body[data-sidebar=dark].vertical-collpsed .vertical-menu #sidebar-menu>ul>li:hover>a {
@@ -786,7 +786,7 @@
             
             .side-bar-button span {
                 font-size: 14px;
-                color: #0d1125;
+                color: #121418;
                 font-weight: 500;
             }
             
