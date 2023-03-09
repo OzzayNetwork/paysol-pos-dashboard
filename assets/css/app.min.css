@@ -5301,5 +5301,17 @@ table.dataTable.dtr-inline.collapsed>tbody>tr>td.dtr-control:before {
     margin: 0 auto
 }
 
+.btn-primary {
+    color: #fff;
+    background-color: #2fb895;
+    border-color: #2fb895;
+}
+
+.btn-primary:hover {
+    color: #fff;
+    background-color: #29a786;
+    border-color: #29a786;
+}
+
 
 /*# sourceMappingURL=app.min.css.map */
