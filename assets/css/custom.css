@@ -30,8 +30,9 @@
             }
             
             .card-header {
-                background-color: rgb(85 110 230 / 16%);
+                background-color: transparent;
                 padding-top: 1.25rem;
+                border-bottom: 1px solid #f6f6f6;
             }
             
             .avatar-xs {
@@ -600,8 +601,8 @@
             .dataTables__top {
                 justify-content: space-between;
                 /* padding-top: 25px; */
-                padding-bottom: 25px;
-                border-bottom: 1px solid #74788d30;
+                padding-bottom: 14px;
+                /* border-bottom: 1px solid #74788d30; */
             }
             
             div.dataTables_wrapper div.dataTables_filter input {

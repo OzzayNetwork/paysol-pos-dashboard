@@ -309,7 +309,7 @@
             </div>
         </header>
 
-        <!-- ========== Left Sidebar Start ========== -->
+         <!-- ========== Left Sidebar Start ========== -->
         <div class="vertical-menu">
 
             <div data-simplebar class="h-100">
@@ -318,7 +318,7 @@
                 <div id="sidebar-menu">
                     <!-- Left Menu Start -->
                     <ul class="metismenu list-unstyled" id="side-menu">
-                        <li class="side-bar-button">
+                        <li class="side-bar-button d-none">
                             <a href="#" class="waves-effect btn btn-light btn-rounded text-left write-msg-btn">
                                 <i class=""><img src="assets/images/plus-icon.svg" alt=""></i>
                                 <span>Compose</span>
@@ -329,6 +329,35 @@
                             <a href="index.html" class="waves-effect">
                                 <i class="mdi mdi-chart-line"></i><span>Analytics</span>
                             </a>
+                        </li>
+
+                        <li class="menu-title" key="t-apps">Production Unit</li>
+                        <li>
+                            <a href="javascript: void(0);" class="waves-effect has-arrow">
+                                <i class="mdi mdi-chef-hat"></i>
+                                <span>Materials/Ingredients</span>
+                            </a>
+                            <ul class="sub-menu" aria-expanded="false">
+                                <li><a href="production-stock.html">Stock Taking</a></li>
+                                <li><a href="productin-new-product.html">Add New Material</a></li>
+                                <li><a href="production-all-products.html">All Materials</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="javascript: void(0);" class="waves-effect has-arrow">
+                                <i class="bx bx-restaurant"></i>
+                                <span>Menu Items</span>
+                            </a>
+                            <ul class="sub-menu" aria-expanded="false">
+                                <li><a href="production-stock.html">Stock Taking</a></li>
+                                <li><a href="productin-new-product.html">Add New Item</a></li>
+                                <li><a href="production-category.html">Menu Categories</a></li>
+                                <li><a href="production-all-products.html">All Menu Items</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="menu-title" key="t-apps">
+                            <hr class="p-0 m-0">
                         </li>
 
                         <li>
@@ -418,14 +447,16 @@
                     <div class="row">
                         <div class="col-12">
                             <div class="page-title-box d-sm-flex align-items-center justify-content-between">
-                                <h4 class="mb-sm-0 font-size-18">Transactions</h4>
+                                <h4 class="mb-sm-0 font-size-18">Menu Items</h4>
 
                                 <div class="page-title-right">
                                     <ol class="breadcrumb m-0">
-                                        <li class="breadcrumb-item"><a href="index.html">Dashboards</a></li>
-                                        <li class="breadcrumb-item active">Transactions</li>
+                                        <li class="breadcrumb-item"><a href="javascript: void(0);">Dashboards</a></li>
+                                        <li class="breadcrumb-item"><a href="javascript: void(0);">Menu Items</a></li>
+                                        <li class="breadcrumb-item active">Menu categories</li>
                                     </ol>
                                 </div>
+
 
                             </div>
                         </div>
@@ -438,8 +469,12 @@
                         <div class="col-12">
                             <div class="card">
                                 <div class="card-header">
-                                    <h4 class="card-title">Latest Transactions</h4>
-                                    <p>All transactions for <strong>Today</strong></p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <h4 class="card-title mb-0 pb-0">All Menu Categories</h4>
+                                        <div>
+                                            <button class="btn btn-primary waves-effect waves-light"><i class="bx bx-list-plus font-size-16 align-middle me-2"></i> Add New Category</button>
+                                        </div>
+                                    </div>
                                 </div>
                                 <div class="card-body">
 
@@ -449,165 +484,93 @@
                                     <table id="datatable-buttons" class="table  dt-responsive nowrap w-100 table-striped">
                                         <thead class="table-dark">
                                             <tr>
-                                                <th>Vehicle</th>
-                                                <th>Date</th>
-                                                <th>Paid By</th>
-                                                <th>Payment Method</th>
-                                                <th>Toll taker</th>
-                                                <th class="text-right">Amount</th>
-                                                <th>View details</th>
+                                                <th>Category Name</th>
+                                                <th>Menu Items</th>
+                                                <th>Date Added</th>
+                                                <th>Added By</th>
+                                                <th></th>
                                             </tr>
                                         </thead>
 
 
                                         <tbody class="table-striped">
-                                            <tr>
-                                                <td class="">
-                                                    <p class="mb-0 pb-0"><strong>Motor Cycle</strong></p>
-                                                    <p class="mb-0 text-uppercase">UAX 134P</p>
+                                           <tr>
+                                                <td>Breakfast</td>
+                                                <td>23 Items</td>
+                                                <td>4 Aug 2022 10:34 AM</td>
+                                                <td>
+                                                    <a href="user-details.html">Kelvin Waswa</a>
+                                                </td>
+                                                <td>
+                                                    <div class="d-flex justify-content-end">
+                                                        <a href="productin-new-product.html" class="btn btn-sm btn-info waves-effect wave-light"><i class="mdi mdi-eye-outline"></i> Open</a>
+                                                        <button class="btn btn-sm btn-success waves-effect wave-light mx-2"><i class="mdi mdi-plus"></i> Add Item</button>
+                                                        <button class="btn btn-sm btn-dark waves-effect wave-light"><i class="mdi mdi-pencil"></i> Edit</button>
+                                                    </div>
+                                                </td>
+                                           </tr>
 
-                                                </td>
-                                                <td>2 Min ago</td>
+                                           <tr>
+                                                <td>Breakfast</td>
+                                                <td>23 Items</td>
+                                                <td>4 Aug 2022 10:34 AM</td>
                                                 <td>
-                                                    <a href="clients-profile.html">Mark Mirenda</a>
+                                                    <a href="user-details.html">Kelvin Waswa</a>
                                                 </td>
                                                 <td>
-                                                    <i class="mdi mdi-cash-multiple"></i> Cash
-                                                </td>
-                                                <td>
-                                                    <p class="mb-0 text-capitalize">
-                                                        <a href="taker-profile.html"><strong>Ann Kaguta</strong></a>
-                                                    </p>
-                                                    <p class="mb-0 pb-0"> <a href="tel:0704500851">0754 500 851</a></p>
-                                                </td>
-                                                <td class="text-right text-uppercase"><strong class="data-carrency" data-selected-currency="UGX" data-base="UGX" data-amount="1000">ugx 1,000</strong></td>
-                                                <td>
-                                                    <!-- Button trigger modal -->
-                                                    <p>
-                                                        <button type="button" class="btn btn-primary btn-sm btn-rounded waves-effect waves-light" data-bs-toggle="modal" data-bs-target=".transaction-detailModal">
-                                                            View Details
-                                                        </button>
-                                                    </p>
+                                                    <div class="d-flex justify-content-end">
+                                                        <a href="productin-new-product.html" class="btn btn-sm btn-info waves-effect wave-light"><i class="mdi mdi-eye-outline"></i> Open</a>
+                                                        <button class="btn btn-sm btn-success waves-effect wave-light mx-2"><i class="mdi mdi-plus"></i> Add Item</button>
+                                                        <button class="btn btn-sm btn-dark waves-effect wave-light"><i class="mdi mdi-pencil"></i> Edit</button>
+                                                    </div>
                                                 </td>
                                             </tr>
 
                                             <tr>
-                                                <td class="">
-                                                    <p class="mb-0 pb-0"><strong>Salon Car</strong></p>
-                                                    <p class="mb-0 text-uppercase">UAH 404P</p>
-
-                                                </td>
-                                                <td>6 Min ago</td>
+                                                <td>Breakfast</td>
+                                                <td>23 Items</td>
+                                                <td>4 Aug 2022 10:34 AM</td>
                                                 <td>
-                                                    <a href="clients-profile.html">Simon Kwiyenda</a>
+                                                    <a href="user-details.html">Kelvin Waswa</a>
                                                 </td>
                                                 <td>
-                                                    <i class="mdi mdi-cash-multiple"></i> Cash
-                                                </td>
-                                                <td>
-                                                    <p class="mb-0 text-capitalize">
-                                                        <a href="taker-profile.html"><strong>Mark Aratubo</strong></a>
-                                                    </p>
-                                                    <p class="mb-0 pb-0"> <a href="tel:0734549800">0734 549 800</a></p>
-                                                </td>
-                                                <td class="text-right text-uppercase"><strong class="data-carrency" data-selected-currency="UGX" data-base="UGX" data-amount="2000">ugx 2,000</strong></td>
-                                                <td>
-                                                    <!-- Button trigger modal -->
-                                                    <p>
-                                                        <button type="button" class="btn btn-primary btn-sm btn-rounded waves-effect waves-light" data-bs-toggle="modal" data-bs-target=".transaction-detailModal">
-                                                            View Details
-                                                        </button>
-                                                    </p>
+                                                    <div class="d-flex justify-content-end">
+                                                        <a href="productin-new-product.html" class="btn btn-sm btn-info waves-effect wave-light"><i class="mdi mdi-eye-outline"></i> Open</a>
+                                                        <button class="btn btn-sm btn-success waves-effect wave-light mx-2"><i class="mdi mdi-plus"></i> Add Item</button>
+                                                        <button class="btn btn-sm btn-dark waves-effect wave-light"><i class="mdi mdi-pencil"></i> Edit</button>
+                                                    </div>
                                                 </td>
                                             </tr>
 
                                             <tr>
-                                                <td class="">
-                                                    <p class="mb-0 pb-0"><strong>Lorry</strong></p>
-                                                    <p class="mb-0 text-uppercase">UAZ 426U</p>
-
-                                                </td>
-                                                <td>4 Min ago</td>
+                                                <td>Breakfast</td>
+                                                <td>23 Items</td>
+                                                <td>4 Aug 2022 10:34 AM</td>
                                                 <td>
-                                                    <a href="clients-profile.html">Mary Ojok</a>
+                                                    <a href="user-details.html">Kelvin Waswa</a>
                                                 </td>
                                                 <td>
-                                                    <i class="mdi mdi-qrcode-scan"></i> Wallet tag
-                                                </td>
-                                                <td>
-                                                    <p class="mb-0 text-capitalize">
-                                                        <a href="taker-profile.html"><strong>Jane Murimbe</strong></a>
-                                                    </p>
-                                                    <p class="mb-0 pb-0"> <a href="tel:0714549024">0714 549 024</a></p>
-                                                </td>
-                                                <td class="text-right text-uppercase"><strong class="data-carrency" data-selected-currency="UGX" data-base="UGX" data-amount="3000">ugx 3,000</strong></td>
-                                                <td>
-                                                    <!-- Button trigger modal -->
-                                                    <p>
-                                                        <button type="button" class="btn btn-primary btn-sm btn-rounded waves-effect waves-light" data-bs-toggle="modal" data-bs-target=".transaction-detailModal">
-                                                            View Details
-                                                        </button>
-                                                    </p>
+                                                    <div class="d-flex justify-content-end">
+                                                        <a href="productin-new-product.html" class="btn btn-sm btn-info waves-effect wave-light"><i class="mdi mdi-eye-outline"></i> Open</a>
+                                                        <button class="btn btn-sm btn-success waves-effect wave-light mx-2"><i class="mdi mdi-plus"></i> Add Item</button>
+                                                        <button class="btn btn-sm btn-dark waves-effect wave-light"><i class="mdi mdi-pencil"></i> Edit</button>
+                                                    </div>
                                                 </td>
                                             </tr>
 
                                             <tr>
-                                                <td class="">
-                                                    <p class="mb-0 pb-0"><strong>Mini Bus</strong></p>
-                                                    <p class="mb-0 text-uppercase">UAB 473T</p>
-
-                                                </td>
-                                                <td>9 Min ago</td>
+                                                <td>Breakfast</td>
+                                                <td>23 Items</td>
+                                                <td>4 Aug 2022 10:34 AM</td>
                                                 <td>
-                                                    <a href="clients-profile.html">Chris Mukisa</a>
+                                                    <a href="user-details.html">Kelvin Waswa</a>
                                                 </td>
                                                 <td>
-                                                    <i class="mdi mdi-cash-multiple"></i> Cash
-                                                </td>
-                                                <td>
-                                                    <p class="mb-0 text-capitalize">
-                                                        <a href="taker-profile.html"><strong>Lucy Kundaki</strong></a>
-                                                    </p>
-                                                    <p class="mb-0 pb-0"> <a href="tel:0704552859">0704 552 859</a></p>
-                                                </td>
-                                                <td class="text-right text-uppercase"><strong class="data-carrency" data-selected-currency="UGX" data-base="UGX" data-amount="1200">ugx 1,200</strong></td>
-                                                <td>
-                                                    <!-- Button trigger modal -->
-                                                    <p>
-                                                        <button type="button" class="btn btn-primary btn-sm btn-rounded waves-effect waves-light" data-bs-toggle="modal" data-bs-target=".transaction-detailModal">
-                                                            View Details
-                                                        </button>
-                                                    </p>
-                                                </td>
-                                            </tr>
-
-                                            <tr>
-                                                <td class="">
-                                                    <p class="mb-0 pb-0"><strong>Minibus</strong></p>
-                                                    <p class="mb-0 text-uppercase">UAL 155E</p>
-
-                                                </td>
-                                                <td>12 Min ago</td>
-                                                <td>
-                                                    <a href="clients-profile.html">Housen Mushema</a>
-                                                </td>
-                                                <td>
-                                                    <i class="mdi mdi-qrcode-scan"></i> Wallet tag
-                                                </td>
-                                                <td>
-                                                    <p class="mb-0 text-capitalize">
-                                                        <a href="taker-profile.html"><strong>Henry Bagiire</strong></a>
-                                                    </p>
-                                                    <p class="mb-0 pb-0"> <a href="tel:0787549098">0787 549 098</a></p>
-                                                </td>
-                                                <td class="text-right text-uppercase"><strong class="data-carrency" data-selected-currency="UGX" data-base="UGX" data-amount="2500">ugx 2,500</strong></td>
-                                                <td>
-                                                    <!-- Button trigger modal -->
-                                                    <p>
-                                                        <button type="button" class="btn btn-primary btn-sm btn-rounded waves-effect waves-light" data-bs-toggle="modal" data-bs-target=".transaction-detailModal">
-                                                            View Details
-                                                        </button>
-                                                    </p>
+                                                    <div class="d-flex justify-content-end">
+                                                        <a href="productin-new-product.html" class="btn btn-sm btn-info waves-effect wave-light"><i class="mdi mdi-eye-outline"></i> Open</a>
+                                                        <button class="btn btn-sm btn-success waves-effect wave-light mx-2"><i class="mdi mdi-plus"></i> Add Item</button>
+                                                        <button class="btn btn-sm btn-dark waves-effect wave-light"><i class="mdi mdi-pencil"></i> Edit</button>
+                                                    </div>
                                                 </td>
                                             </tr>
 
