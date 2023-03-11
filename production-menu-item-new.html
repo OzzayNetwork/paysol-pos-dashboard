@@ -7,15 +7,21 @@
 <head>
 
     <meta charset="utf-8" />
-    <title>Paysol | John & jo's Resturant</title>
+    <title>Early Bird | Connecting your to your world</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta content="Premium Multipurpose Admin & Dashboard Template" name="description" />
     <meta content="Themesbrand" name="author" />
     <!-- App favicon -->
     <link rel="shortcut icon" href="assets/images/favicon.svg">
 
+    <!-- DataTables -->
+    <link href="assets/libs/datatables.net-bs4/css/dataTables.bootstrap4.min.css" rel="stylesheet" type="text/css" />
+    <link href="assets/libs/datatables.net-buttons-bs4/css/buttons.bootstrap4.min.css" rel="stylesheet" type="text/css" />
+
     <!-- Bootstrap Css -->
     <link href="assets/css/bootstrap.min.css" id="bootstrap-style" rel="stylesheet" type="text/css" />
+    <!-- Bootstrap select styling -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/css/bootstrap-select.min.css">
     <!-- Icons Css -->
     <link href="assets/css/icons.min.css" rel="stylesheet" type="text/css" />
     <!-- App Css-->
@@ -303,7 +309,7 @@
             </div>
         </header>
 
-        <!-- ========== Left Sidebar Start ========== -->
+         <!-- ========== Left Sidebar Start ========== -->
         <div class="vertical-menu">
 
             <div data-simplebar class="h-100">
@@ -333,7 +339,7 @@
                             </a>
                             <ul class="sub-menu" aria-expanded="false">
                                 <li><a href="production-stock.html">Stock Taking</a></li>
-                                <li><a href="productin-new-product.html">Add New Material</a></li>
+                                <li><a href="production-category-info.html">Add New Material</a></li>
                                 <li><a href="production-all-materials.html">All Materials</a></li>
                             </ul>
                         </li>
@@ -344,7 +350,7 @@
                             </a>
                             <ul class="sub-menu" aria-expanded="false">
                                 <li><a href="production-stock.html">Stock Taking</a></li>
-                                <li><a href="production-item-new.html">Add New Item</a></li>
+                                <li><a href="production-category-info.html">Add New Item</a></li>
                                 <li><a href="production-category.html">Menu Categories</a></li>
                                 <li><a href="production-all-products.html">All Menu Items</a></li>
                             </ul>
@@ -427,6 +433,94 @@
         </div>
         <!-- Left Sidebar End -->
 
+        <!-- modals -->
+            <!-- new menu category modal -->
+            <div class="modal fade" id="new-category" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content border-radius-0">
+                        <div class="modal-header d-none">
+                            <h5 class="modal-title" id="exampleModalCenterTitle">Add Menu Category</h5>
+                            <span class="close font-28 cursor-pointer" data-dismiss="modal" aria-label="Close">
+                                 <span aria-hidden="true">&times;</span>
+                            </span>
+                        </div>
+                        <div class="modal-body pt-4">
+                            <div class="text-center mb-4">
+                                <div class="avatar-md mx-auto mb-4">
+                                    <div class="avatar-title bg-light rounded-circle text-primary h1">
+                                        <i class="bx bx-list-plus "></i>
+                                    </div>
+                                </div>
+
+                                <div class="row justify-content-center">
+                                    <div class="col-xl-10">
+                                        <h4 class="text-primary">Add Menu category</h4>
+                                        <p class="text-muted font-size-14 mb-4">Write Down the Name to The new Menu Category Below</p>
+
+                                        <div class="input-group bg-light rounded">
+                                            <input type="email" class="form-control bg-transparent border-0" placeholder="Category Name" aria-label="Recipient's username" aria-describedby="button-addon2">
+                                            
+                                            <button class="btn btn-primary" type="button" id="button-addon2" data-dismiss="modal" aria-label="Close">
+                                                <i class="bx bx-plus"></i> Add
+                                            </button>
+                                            
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <!-- new menu category modal -->
+
+            <!-- editing the name to a menu category -->
+            <div class="modal fade" id="edit-category" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content border-radius-0">
+                        <div class="modal-header d-none">
+                            <h5 class="modal-title" id="exampleModalCenterTitle">Edit Menu Category</h5>
+                            <span class="close font-28 cursor-pointer" data-dismiss="modal" aria-label="Close">
+                                 <span aria-hidden="true">&times;</span>
+                            </span>
+                        </div>
+                        <div class="modal-body pt-4">
+                            <div class="text-center mb-4">
+                                <div class="avatar-md mx-auto mb-4">
+                                    <div class="avatar-title bg-light rounded-circle text-dark h1">
+                                        <i class="mdi mdi-clipboard-edit-outline"></i>
+                                    </div>
+                                </div>
+
+                                <div class="row justify-content-center">
+                                    <div class="col-xl-10">
+                                        <h4 class="text-dark">Edit Menu Category</h4>
+                                        <p class="text-muted font-size-14 mb-4">Write below the prefered name for this Menu Category</p>
+
+                                        <div class="input-group bg-light rounded">
+                                            <input type="email" class="form-control bg-transparent border-0" placeholder="Category Name" aria-label="Recipient's username" aria-describedby="button-addon2">
+                                            
+                                            <button class="btn btn-primary" type="button" id="button-addon2" data-dismiss="modal" aria-label="Close">
+                                                <i class="mdi mdi-check-all"></i> Save
+                                            </button>
+                                            
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <!-- editing the name to a menu categor -->
+        <!-- end of modals -->
+
 
 
         <!-- ============================================================== -->
@@ -441,344 +535,345 @@
                     <div class="row">
                         <div class="col-12">
                             <div class="page-title-box d-sm-flex align-items-center justify-content-between">
-                                <h4 class="mb-sm-0 font-size-18">Dashboard</h4>
+                                <h4 class="mb-sm-0 font-size-18">Add Item</h4>
 
                                 <div class="page-title-right">
                                     <ol class="breadcrumb m-0">
                                         <li class="breadcrumb-item"><a href="javascript: void(0);">Dashboards</a></li>
-                                        <li class="breadcrumb-item active">Dashboard</li>
+                                        <li class="breadcrumb-item"><a href="javascript: void(0);">Menu items</a></li>
+                                        <li class="breadcrumb-item active">Add Item</li>
                                     </ol>
                                 </div>
+
 
                             </div>
                         </div>
                     </div>
                     <!-- end page title -->
+
+                    <!-- eTransactions table -->
+
                     <div class="row">
-                        <div class="col-lg-12 px-sm-30px">
+                        <div class="col-12">
                             <div class="card">
-                                <div class="card-body">
-                                    <div class="row">
-                                        <div class="col-lg-4">
-                                            <div class="d-flex">
-                                                <div class="flex-shrink-0 me-3">
-                                                    <img src="assets/images/users/avatar-1.png" alt="your Logo" class="avatar-md rounded-circle img-thumbnail">
-                                                </div>
-                                                <div class="flex-grow-1 align-self-center">
-                                                    <div class="text-muted">
-                                                        <p class="mb-2">Welcome Back</p>
-                                                        <h5 class="mb-1">John & Jo's Resturant</h5>
-                                                        <p class="mb-0">Summary overview with filters for more personalized experience.</p>
-                                                    </div>
-                                                </div>
-                                            </div>
+                                <div class="card-header">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <h4 class="card-title mb-0 pb-0">All Menu Categories</h4>
+                                        <div>
+                                            <button data-toggle="modal" data-target="#new-category" class="btn btn-primary waves-effect waves-light"><i class="bx bx-list-plus font-size-16 align-middle me-2"></i> Add Material/Ingredients</button>
                                         </div>
-
-                                        <div class="col-lg-8 align-self-center">
-                                            <div class="text-lg-left mt-4 mt-lg-0">
-                                                <div class="row">
-                                                    <div class="col-3 col-sm-3 col-md-2">
-                                                        <div>
-                                                            <div class="avatar-xs mb-3">
-                                                                <span class="avatar-title rounded-circle bg-info font-size-16">
-                                                                        <i class="mdi mdi-account-details-outline text-white"></i>
-                                                                    </span>
-                                                            </div>
-                                                            <p class="text-muted text-truncate mb-2">Saved Contacts</p>
-                                                            <h5 class="mb-0">48</h5>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-3 col-sm-3 col-md-2">
-                                                        <div>
-                                                            <div class="avatar-xs mb-3">
-                                                                <span class="avatar-title rounded-circle font-size-16">
-                                                                        <i class="mdi mdi-chat-outline text-white"></i>
-                                                                    </span>
-                                                            </div>
-                                                            <p class="text-muted text-truncate mb-2">SMS Bundles</p>
-                                                            <h5 class="mb-0">6,503</h5>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-3 col-sm-3 col-md-2">
-                                                        <div>
-                                                            <div class="avatar-xs mb-3">
-                                                                <span class="avatar-title rounded-circle bg-pink font-size-16">
-                                                                        <i class="mdi mdi-email-multiple-outline text-white"></i>
-                                                                    </span>
-                                                            </div>
-                                                            <p class="text-muted text-truncate mb-2">Email Bundles</p>
-                                                            <h5 class="mb-0">180</h5>
-
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-3 ">
-                                                        <div>
-                                                            <div class="avatar-xs mb-3">
-                                                                <span class="avatar-title rounded-circle bg-whatsApp font-size-16">
-                                                                        <i class="mdi mdi-whatsapp text-white"></i>
-                                                                    </span>
-                                                            </div>
-                                                            <p class="text-muted text-truncate mb-2">WhatsApp Bundles</p>
-                                                            <h5 class="mb-0">23,203</h5>
-
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="col-3 d-none d-md-flex">
-                                                        <div>
-                                                            <div class="avatar-xs mb-3">
-                                                                <span class="avatar-title rounded-circle bg-info font-size-16">
-                                                                        <i class="mdi mdi-check-all text-white"></i>
-                                                                    </span>
-                                                            </div>
-                                                            <p class="text-muted text-truncate mb-2">Avg. Communication<br> sent monthly</p>
-                                                            <h5 class="mb-0">103.2</h5>
-
-                                                        </div>
-                                                    </div>
-
-                                                </div>
-                                            </div>
-                                        </div>
-
-
                                     </div>
-                                    <!-- end row -->
+                                </div>
+                                <div class="card-body">
+
+
+
+
+                                    <table id="datatable-buttons" class="table  dt-responsive nowrap w-100 ">
+                                        <thead class="table-dark">
+                                            <tr>
+                                                <th>Items</th>
+                                                <th>UOM</th>
+                                                <th>Opening Stock</th>
+                                                <th>Purchases</th>
+                                                <th>Used</th>
+                                                <th>Closing</th>
+                                                <th>Physical Bal.</th>
+                                                <th></th>
+                                            </tr>
+                                        </thead>
+                                        <tfoot>
+                                            <tr class="table-light">
+                                                <th>5 Menu Categories</th>
+                                                <th colspan="7">112 Menu Items</th>
+                                            </tr>
+                                        </tfoot>
+
+
+                                        <tbody class="">
+                                          
+                                            <tr>
+                                                <td>Chicken Marrinate</td>
+                                                <td>Each</td>
+                                                <td>105.00</td>
+                                                <td>15</td>
+                                                <td>100</td>
+                                                <td>-</td>
+                                                <td>
+                                                    20
+                                                </td>
+                                                <td>
+                                                    <div class="d-flex justify-content-end">
+                                                        <a href="#" class="btn btn-sm btn-info waves-effect wave-light"><i class="mdi mdi-eye-outline"></i> Open</a>
+                                                        <button class="btn btn-sm btn-success waves-effect wave-light mx-2"><i class="mdi mdi-plus"></i> Add Stock</button>
+                                                        <button  class="btn btn-sm btn-dark waves-effect wave-light"><i class="mdi mdi-pencil"></i> Edit</button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td>Lunch Box</td>
+                                                <td>Each</td>
+                                                <td>105.00</td>
+                                                <td>15</td>
+                                                <td>100</td>
+                                                <td>-</td>
+                                                <td>
+                                                    20
+                                                </td>
+                                                <td>
+                                                     <div class="d-flex justify-content-end">
+                                                        <a href="#" class="btn btn-sm btn-info waves-effect wave-light"><i class="mdi mdi-eye-outline"></i> Open</a>
+                                                        <button class="btn btn-sm btn-success waves-effect wave-light mx-2"><i class="mdi mdi-plus"></i> Add Stock</button>
+                                                        <button  class="btn btn-sm btn-dark waves-effect wave-light"><i class="mdi mdi-pencil"></i> Edit</button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td>Multishine</td>
+                                                <td>Each</td>
+                                                <td>105.00</td>
+                                                <td>15</td>
+                                                <td>100</td>
+                                                <td>-</td>
+                                                <td>
+                                                    20
+                                                </td>
+                                                <td>
+                                                     <div class="d-flex justify-content-end">
+                                                        <a href="#" class="btn btn-sm btn-info waves-effect wave-light"><i class="mdi mdi-eye-outline"></i> Open</a>
+                                                        <button class="btn btn-sm btn-success waves-effect wave-light mx-2"><i class="mdi mdi-plus"></i> Add Stock</button>
+                                                        <button  class="btn btn-sm btn-dark waves-effect wave-light"><i class="mdi mdi-pencil"></i> Edit</button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>Multishine</td>
+                                                <td>Each</td>
+                                                <td>105.00</td>
+                                                <td>15</td>
+                                                <td>100</td>
+                                                <td>-</td>
+                                                <td>
+                                                    20
+                                                </td>
+                                                <td>
+                                                     <div class="d-flex justify-content-end">
+                                                        <a href="#" class="btn btn-sm btn-info waves-effect wave-light"><i class="mdi mdi-eye-outline"></i> Open</a>
+                                                        <button class="btn btn-sm btn-success waves-effect wave-light mx-2"><i class="mdi mdi-plus"></i> Add Stock</button>
+                                                        <button  class="btn btn-sm btn-dark waves-effect wave-light"><i class="mdi mdi-pencil"></i> Edit</button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td>Tea Leaves</td>
+                                                <td>Each</td>
+                                                <td>105.00</td>
+                                                <td>15</td>
+                                                <td>100</td>
+                                                <td>-</td>
+                                                <td>
+                                                    20
+                                                </td>
+                                                <td>
+                                                     <div class="d-flex justify-content-end">
+                                                        <a href="#" class="btn btn-sm btn-info waves-effect wave-light"><i class="mdi mdi-eye-outline"></i> Open</a>
+                                                        <button class="btn btn-sm btn-success waves-effect wave-light mx-2"><i class="mdi mdi-plus"></i> Add Stock</button>
+                                                        <button  class="btn btn-sm btn-dark waves-effect wave-light"><i class="mdi mdi-pencil"></i> Edit</button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+
+
+                                        </tbody>
+                                    </table>
                                 </div>
                             </div>
                         </div>
+                        <!-- end col -->
                     </div>
 
-                    <!-- quick stats -->
-                    <div class="row">
-                        <div class="col-xl-4 px-sm-30px">
-                            <div class="card bg-danger text-white member-wedges-card">
-                                <a href="blocked.html">
-                                    <div class="card-body">
-
-                                        <div class="d-flex">
-                                            <div class="d-flex flex-wrap align-items-start">
-                                                <h4 class="mb-3 me-2 text-white">Blocked Messages</h4>
-                                                <p class="text-white mb-1 opacity-50">Blocked Messages by Type</p>
-
-
-                                            </div>
-                                            <div class="ms-auto align-self-end">
-                                                <i class="mdi mdi-block-helper display-4 text-white opacity-50"></i>
-                                            </div>
-                                        </div>
-
-                                        <div class="d-flex flex-wrap text-white">
-                                            <div>
-                                                <ul class="list-inline font-size-20 contact-links mb-0 d-flex">
-                                                    <li class="list-inline-item d-flex px-2 align-items-center justify-content-center ml-0 pl-0">
-                                                        <a title="Message"><i class="mdi mdi-chat-outline pr-2 opacity-75"></i></a>
-                                                        <small class="font-16px fw-semibold">102</small>
-                                                    </li>
-                                                    <li class="list-inline-item d-flex px-2 align-items-center justify-content-center">
-                                                        <a title="Message"><i class="bx bx-envelope pr-2 opacity-75"></i></a>
-                                                        <small class="font-16px fw-semibold">2,225</small>
-                                                    </li>
-                                                    <li class="list-inline-item d-flex px-2 align-items-center justify-content-center">
-                                                        <a title="Message"><i class="mdi mdi-whatsapp pr-2 opacity-75"></i></a>
-                                                        <small class="font-16px fw-semibold">22</small>
-                                                    </li>
-                                                </ul>
-                                            </div>
-
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="col-xl-8 px-sm-30px">
-                            <div class="row">
-                                <div class="col-sm-4">
-                                    <div class="card">
-                                        <div class="card-body">
-                                            <div class="d-flex align-items-center mb-3">
-                                                <div class="avatar-xs-2 me-3">
-                                                    <span class="avatar-title rounded-circle bg-info bg-soft text-success  font-size-18">
-                                                        <i class="mdi  mdi-chat-outline h2 mb-0 pb-0 text-primary"></i>
-                                                    </span>
-                                                </div>
-                                                <div class="d-flex flex-column">
-                                                    <span>Sent SMSs</span>
-                                                    <div class="btn-group">
-                                                        <button class="btn btn-link dropdown-toggle btn-sm px-0 text-left pt-0 card-month-filter" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                                            Feb 2022 <i class="mdi mdi-chevron-down"></i>
-                                                        </button>
-                                                        <div class="dropdown-menu">
-                                                            <a class="dropdown-item" href="#">Feb 2022</a>
-                                                            <a class="dropdown-item" href="#">Jan 2022</a>
-                                                            <a class="dropdown-item" href="#">Dec 2021</a>
-                                                            <a class="dropdown-item" href="#">Nov 2021</a>
-                                                            <a class="dropdown-item" href="#">Oct 2021</a>
-                                                            <a class="dropdown-item" href="#">Sep 2021</a>
-                                                            <a class="dropdown-item" href="#">Aug 2021</a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="text-muted mt-4">
-                                                <h4>1,452 <i class="mdi mdi-chevron-up ms-1 text-success"></i></h4>
-                                                <div class="d-flex">
-                                                    <span class="badge badge-soft-success font-size-12"> + 0.2% </span> <span class="ms-2 text-truncate">From previous period</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="col-sm-4">
-                                    <div class="card">
-                                        <div class="card-body">
-                                            <div class="d-flex align-items-center mb-3">
-                                                <div class="avatar-xs-2 me-3">
-                                                    <span class="avatar-title rounded-circle bg-pink bg-soft text-primary font-size-18">
-                                                        <i class="mdi mdi-email-multiple-outline  h2 text-pink p-0 m-0"></i>
-                                                    </span>
-                                                </div>
-                                                <div class="d-flex flex-column">
-                                                    <span>Sent Emails</span>
-                                                    <div class="btn-group">
-                                                        <button class="btn btn-link dropdown-toggle btn-sm px-0 text-left pt-0 card-month-filter" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                                            Feb 2022 <i class="mdi mdi-chevron-down"></i>
-                                                        </button>
-                                                        <div class="dropdown-menu">
-                                                            <a class="dropdown-item" href="#">Feb 2022</a>
-                                                            <a class="dropdown-item" href="#">Jan 2022</a>
-                                                            <a class="dropdown-item" href="#">Dec 2021</a>
-                                                            <a class="dropdown-item" href="#">Nov 2021</a>
-                                                            <a class="dropdown-item" href="#">Oct 2021</a>
-                                                            <a class="dropdown-item" href="#">Sep 2021</a>
-                                                            <a class="dropdown-item" href="#">Aug 2021</a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="text-muted mt-4">
-                                                <h4>2,325<i class="mdi mdi-chevron-up ms-1 text-success"></i></h4>
-                                                <div class="d-flex">
-                                                    <span class="badge badge-soft-success font-size-12"> + 0.2% </span> <span class="ms-2 text-truncate">From previous period</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="col-sm-4">
-                                    <div class="card">
-                                        <div class="card-body">
-                                            <div class="d-flex align-items-center mb-3">
-                                                <div class="avatar-xs-2 me-3">
-                                                    <span class="avatar-title rounded-circle bg-success bg-soft text-primary font-size-18">
-                                                        <i class="mdi mdi mdi-whatsapp  h2 mb-0 pb-0 text-whatsApp"></i>
-                                                    </span>
-                                                </div>
-                                                <div class="d-flex flex-column">
-                                                    <span>Sent WhatsApp Texts</span>
-                                                    <div class="btn-group">
-                                                        <button class="btn btn-link dropdown-toggle btn-sm px-0 text-left pt-0 card-month-filter" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                                            Feb 2022 <i class="mdi mdi-chevron-down"></i>
-                                                        </button>
-                                                        <div class="dropdown-menu">
-                                                            <a class="dropdown-item" href="#">Feb 2022</a>
-                                                            <a class="dropdown-item" href="#">Jan 2022</a>
-                                                            <a class="dropdown-item" href="#">Dec 2021</a>
-                                                            <a class="dropdown-item" href="#">Nov 2021</a>
-                                                            <a class="dropdown-item" href="#">Oct 2021</a>
-                                                            <a class="dropdown-item" href="#">Sep 2021</a>
-                                                            <a class="dropdown-item" href="#">Aug 2021</a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="text-muted mt-4">
-                                                <h4>21,326<i class="mdi mdi-chevron-up ms-1 text-success"></i></h4>
-
-                                                <div class="d-flex">
-                                                    <span class="badge badge-soft-warning font-size-12"> 0% </span> <span class="ms-2 text-truncate">From previous period</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- end row -->
-                        </div>
-                    </div>
-                    <!-- end of quick stats -->
-
-                    <div class="row d-non">
-                        <div class="col-xl-6 px-sm-30px">
-                            <div class="card">
-                                <div class="card-body">
-                                    <h4 class="card-title mb-0">Sent Messages</h4>
-                                    <small class="mb-3 text-muted">The last 12 Months</small>
-
-                                    <div>
-                                        <div id="member-salary-chart" class="apex-charts" dir="ltr"></div>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-                        <div class="col-xl-6">
-                            <div class="card">
-                                <div class="card-body">
-                                    <div class="float-end">
-                                        <select class="form-select form-select-sm ms-2">
-                                            <option value="2022" selected>2022</option>
-                                            <option value="2021">2021</option>
-                                            <option value="2020">2020</option>
-                                            <option value="2019">2019</option>
-                                        </select>
-                                    </div>
-                                    <h4 class="card-title mb-0">Communication Usage</h4>
-                                    <p class="mb-3">Summary of messages sent the last year</p>
-
-                                    <div class="row">
-
-                                        <div class="col-sm-8">
-                                            <div>
-                                                <div id="sent-bundles" class="apex-charts"></div>
-                                            </div>
-                                        </div>
-
-                                        <div class="col-sm-4 align-self-center">
-                                            <div>
-                                                <p class="mb-2"><i class="mdi mdi-circle align-middle font-size-10 me-2 text-primary"></i> SMSs</p>
-                                                <h5>22,562 | <span class="text-muted font-size-14">23 Contacts</span></h5>
-                                            </div>
-
-                                            <div class="mt-4 pt-2">
-                                                <p class="mb-2"><i class="mdi mdi-circle align-middle font-size-10 me-2 text-pink"></i> Emails</p>
-                                                <h5>632,230 | <span class="text-muted font-size-14">75 Contacts</span></h5>
-                                            </div>
-
-                                            <div class="mt-4 pt-2">
-                                                <p class="mb-2"><i class="mdi mdi-circle align-middle font-size-10 me-2 text-whatsApp"></i> WhatsApp Texts</p>
-                                                <h5>35,659 | <span class="text-muted font-size-14">203 Contacts</span></h5>
-                                            </div>
-                                            <div class="mt-4">
-                                                <a href="javascript: void(0);" class="btn btn-primary btn-sm">Top Up <i class="mdi mdi-arrow-right ms-1"></i></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
                     <!-- end row -->
-
-
-
                 </div>
                 <!-- container-fluid -->
             </div>
             <!-- End Page-content -->
+
+            <!-- Transaction Modal -->
+            <div class="modal fade transaction-detailModal" tabindex="-1" role="dialog" aria-labelledby="transaction-detailModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="transaction-detailModalLabel">Transactions Details</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+
+
+                            <div class="table-responsive mt-4">
+                                <table class="table align-middle table-nowrap">
+                                    <tbody>
+                                        <tr>
+                                            <td style="width: 30%">
+                                                <p class="mb-0">Car Plate Number</p>
+                                            </td>
+                                            <td style="width: 25%">
+                                                <h5 class="mb-0 text-uppercase">UAG 1235p</h5>
+                                            </td>
+
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <p class="mb-0">Vehicle Category</p>
+                                            </td>
+                                            <td>
+                                                <h5 class="mb-0">Salon Car</h5>
+                                            </td>
+
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <p class="mb-0">Payment Date</p>
+                                            </td>
+                                            <td>
+                                                <h5 class="mb-0">22 Apr 2022 06:54PM</h5>
+                                            </td>
+
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <p class="mb-0">San Diego</p>
+                                            </td>
+                                            <td>
+                                                <h5 class="mb-0">1,026</h5>
+                                            </td>
+
+                                        </tr>
+                                        <tr>
+                                            <td colspan="2">
+                                                <p class="mb-0 pb-0">Amount Paid</p>
+                                                <h3>UGX 2,000</h3>
+                                            </td>
+                                        </tr>
+                                        <TR>
+                                            <td col-span="2">
+                                                <p class="mb-2">Attended By<span class="text-primary"> Alex Sebeye</span></p>
+                                                <p class="mb-4">Toll taker's No. <span class="text-primary">0704549859</span></p>
+                                            </td>
+                                        </TR>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- end modal -->
+
+            <!-- filter right of canvus -->
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="dt__filter" aria-labelledby="offcanvasRightLabel">
+                <div class="offcanvas-header">
+                    <h5 id="offcanvasRightLabel">Filter Transactions</h5>
+                    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <div class="col-12 mb-4">
+                        <div class="alert alert-info alert-border" role="alert">
+                            Use this section to filter the table to the way of your liking. Remember to submit your selection so as to submit the selections
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="mb-4">
+                            <label>Select a date range</label>
+
+                            <div class="input-daterange input-group" id="datepicker6" data-date-format="dd M, yyyy" data-date-autoclose="true" data-provide="datepicker" data-date-container='#datepicker6'>
+                                <input type="text" class="form-control date-drop-input" name="start" placeholder="Start Date" readonly />
+                                <input type="text" class="form-control date-drop-input" name="end" placeholder="End Date" readonly />
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12">
+                        <div class="mb-4">
+                            <label>Amount range</label>
+
+                            <div class="input-daterange input-group">
+                                <input type=" text " class="form-control " name="" placeholder="Min Amount" />
+                                <input type="text " class="form-control " name="" placeholder="Max Amount" />
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12">
+                        <div class="mb-4">
+                            <label>Toll takers</label>
+                            <div class="row">
+                                <div class="col-md-12 col-lg-6">
+                                    <div class="form-check form-check-primary mb-3">
+                                        <input class="form-check-input" type="checkbox" id="allTollTakers" checked>
+                                        <label class="form-check-label text-capitalize" for="allTollTakers">
+                                            All toll takers
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-12 col-lg-6">
+                                    <div class="form-check form-check-primary mb-3">
+                                        <input class="form-check-input" type="checkbox" id="tollTaker1">
+                                        <label class="form-check-label text-capitalize" for="tollTaker1">
+                                            Kelvin Njuguna
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-12 col-lg-6">
+                                    <div class="form-check form-check-primary mb-3">
+                                        <input class="form-check-input" type="checkbox" id="tollTaker3">
+                                        <label class="form-check-label text-capitalize" for="tollTaker3">
+                                            Samoli Chillo
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-12 col-lg-6">
+                                    <div class="form-check form-check-primary mb-3">
+                                        <input class="form-check-input" type="checkbox" id="tollTaker4">
+                                        <label class="form-check-label text-capitalize" for="tollTaker4">
+                                            Alex Wanjala
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-12 col-lg-6">
+                                    <div class="form-check form-check-primary mb-3">
+                                        <input class="form-check-input" type="checkbox" id="tollTaker5">
+                                        <label class="form-check-label text-capitalize" for="tollTaker5">
+                                            Edwin Kiploman
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+
+                    <div class="col-12">
+                        <div class="mb-4">
+                            <button type="button" class="btn btn-primary waves-effect waves-light w-100">
+                                <i class="mdi mdi-filter-variant font-size-16 align-middle me-2"></i> Filter Table
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- of canvus -->
+
 
 
             <footer class="footer ">
@@ -789,9 +884,9 @@
                                 document.write(new Date().getFullYear())
                             </script> © PaySol POS Admin Portal
                         </div>
-                        <div class="col-sm-6 d-none ">
+                        <div class="col-sm-6 ">
                             <div class="text-sm-end d-sm-block ">
-                                South Imenti Dairy
+                                Connecting you to your World
                             </div>
                         </div>
                     </div>
@@ -803,36 +898,61 @@
     </div>
     <!-- END layout-wrapper -->
 
+
+
     <!-- Right bar overlay-->
     <div class="rightbar-overlay "></div>
 
     <!-- JAVASCRIPT -->
     <script src="assets/libs/jquery/jquery.min.js "></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js " integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49 " crossorigin="anonymous "></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js " integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy " crossorigin="anonymous "></script>
+
     <script src="assets/libs/bootstrap/js/bootstrap.bundle.min.js "></script>
     <script src="assets/libs/metismenu/metisMenu.min.js "></script>
     <script src="assets/libs/simplebar/simplebar.min.js "></script>
     <script src="assets/libs/node-waves/waves.min.js "></script>
 
+
+    <!-- Required datatable js -->
+    <script src="assets/libs/datatables.net/js/jquery.dataTables.min.js "></script>
+    <script src="assets/libs/datatables.net-bs4/js/dataTables.bootstrap4.min.js "></script>
+    <!-- Buttons examples -->
+    <script src="assets/libs/datatables.net-buttons/js/dataTables.buttons.min.js "></script>
+    <script src="assets/libs/datatables.net-buttons-bs4/js/buttons.bootstrap4.min.js "></script>
+    <script src="assets/libs/jszip/jszip.min.js "></script>
+    <script src="assets/libs/pdfmake/build/pdfmake.min.js "></script>
+    <script src="assets/libs/pdfmake/build/vfs_fonts.js "></script>
+    <script src="assets/libs/datatables.net-buttons/js/buttons.html5.min.js "></script>
+    <script src="assets/libs/datatables.net-buttons/js/buttons.print.min.js "></script>
+    <script src="assets/libs/datatables.net-buttons/js/buttons.colVis.min.js "></script>
+    <!-- Bootstrap select -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/js/bootstrap-select.min.js "></script>
+
+    <script src="assets/libs/select2/js/select2.min.js"></script>
+    <script src="assets/libs/bootstrap-datepicker/js/bootstrap-datepicker.min.js"></script>
+    <script src="assets/libs/spectrum-colorpicker2/spectrum.min.js"></script>
+    <script src="assets/libs/bootstrap-timepicker/js/bootstrap-timepicker.min.js"></script>
+    <script src="assets/libs/bootstrap-touchspin/jquery.bootstrap-touchspin.min.js"></script>
+    <script src="assets/libs/bootstrap-maxlength/bootstrap-maxlength.min.js"></script>
+    <script src="assets/libs/%40chenfengyuan/datepicker/datepicker.min.js"></script>
+
+    <!-- form advanced init -->
+    <script src="assets/js/pages/form-advanced.init.js"></script>
+
+
+    <!-- Responsive examples -->
+    <script src="assets/libs/datatables.net-responsive/js/dataTables.responsive.min.js "></script>
+    <script src="assets/libs/datatables.net-responsive-bs4/js/responsive.bootstrap4.min.js "></script>
     <!-- numerals number formater -->
     <script src="assets/libs/numeral/numeral.js "></script>
-
-    <!-- apexcharts -->
-    <script src="assets/libs/apexcharts/apexcharts.min.js "></script>
-
-
-    <!-- dashboard init -->
-    <script src="assets/js/pages/dashboard.init.js "></script>
-    <!-- Saas dashboard init -->
-    <script src="assets/js/pages/earlyBirdDashboard.js "></script>
-
-
+    <!-- Datatable init js -->
+    <script src="assets/js/pages/datatables.init.js "></script>
 
     <!-- App js -->
     <script src="assets/js/app.js "></script>
     <script src="assets/js/custom.js "></script>
 </body>
-
-
 <!-- index.html   13:55:49 GMT -->
 
 </html>
