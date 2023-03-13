@@ -101,7 +101,7 @@ var options = {
 
             },
             title: {
-                text: "Messages Sent",
+                text: "Amount In KES",
             }
         },
         series: [{
