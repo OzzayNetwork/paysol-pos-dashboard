@@ -1120,3 +1120,12 @@
                 -webkit-box-shadow: 0 0 0 0.15rem rgb(111 132 234 / 50%);
                 box-shadow: 0 0 0 0.15rem rgb(111 132 234 / 50%);
             }
+            .bg-primary{
+                background-color: #00C39A !important;
+            }
+            .text-primary{
+                color: #00C39A !important;
+            }
+            .frost-1{
+                background-image: url(../images/Frost/promo_bg.webp);
+            }

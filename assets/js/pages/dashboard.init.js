@@ -128,7 +128,7 @@ options = {
     stroke: {
         dashArray: 4
     },
-    series: [67],
-    labels: ["Transactions increase"]
+    series: [23],
+    labels: ["Sales Vs Stock"]
 };
 (chart = new ApexCharts(document.querySelector("#radialBar-chart"), options)).render();

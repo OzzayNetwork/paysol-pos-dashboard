@@ -105,21 +105,21 @@ var options = {
             }
         },
         series: [{
-                name: "SMS",
+                name: "Target",
                 data: [4023658, 5123456, 41458975, 67123654, 22123654, 43789654, 36789623, 52320365, 24023147, 18012586, 36036985, 48025820]
             }, {
-                name: "Emails",
+                name: "Last Year",
                 data: [13025856, 23025632, 20032145, 8021457, 13032568, 27456987, 18235897, 22235789, 10213214, 16365478, 24456987, 22123568]
             },
             {
-                name: "WhatsApp",
-                data: [1325856, 2325632, 2032145, 802147, 1303268, 27456987, 1823897, 2223789, 1013214, 1636478, 2445987, 2213568]
+                name: "This Year",
+                data: [13258563, 12325632, 6032145, 3802147, 3303268, 47456987, 1823897, 22237899, 10132149, 16364789, 24459879, 12213568]
             }
         ],
         xaxis: {
             categories: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
         },
-        colors: ["#556ee6", "#e83e8c", "#00a884"],
+        colors: ["#2D2D2D", "#aae5d3", "#00a571"],
         legend: {
             position: "bottom"
         },
@@ -197,7 +197,7 @@ var options = {
                     series.forEach((s) => {
                         currentTotal += s[dataPointIndex]
                     })
-                    return "<span class='text-right' > " + numeral(value).format('0,0') + "Sent</span> "
+                    return "<span class='text-right' > KES " + numeral(value).format('0,0') + "</span> "
 
                 }
             }
