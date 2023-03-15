@@ -518,7 +518,7 @@
                             <div class="card">
                                 <div class="card-header">
                                     <div class="d-flex justify-content-between align-items-center">
-                                        <h4 class="card-title mb-0 pb-0">All Menu Categories</h4>
+                                        <h4 class="card-title mb-0 pb-0">Add Materials/Ingredients</h4>
                                         <div class="d-none">
                                             <button data-toggle="modal" data-target="#new-category" class="btn btn-primary waves-effect waves-light"><i class="bx bx-list-plus font-size-16 align-middle me-2"></i> Add New Category</button>
                                         </div>
@@ -526,39 +526,6 @@
                                 </div>
                                 <div class="card-body">
                                     <div class="row">
-                                        <div class="col-md-4 col-sm-12 mb-3">
-                                            <div class="form-group">
-                                                <label for="">Item Name</label>
-                                                <input type="text" placeholder="Enter the Product Name" class="form-control">
-                                            </div>
-                                        </div>
-                                        <div class="col-md-4 col-sm-12 mb-3">
-                                           <div class="form-group">
-                                                <label for="">Menu Category</label>
-                                                <select class="selectpicker show-tick form-control" data-live-search="true" title="Select Menu Category" data-style="form-select btn border">
-                                                    <option >Appetizer</option>
-                                                    <option >Breakfast</option>
-                                                    <option >Dessert</option>
-                                                    <option >Hot Drinks</option>
-                                                    <option >Main Course</option>
-                                                </select>
-                                           </div>
-                                        </div>
-                                        <div class="col-sm-12 col-md-4 col-lg-4 mb-3">
-                                            <div class="form-group">
-                                                <label for="">Product Price</label>
-                                                <input type="text" placeholder="Enter Amount" class="form-control">
-                                            </div>
-                                        </div>
-
-                                        <div class="col-12">
-                                            <div class="bg-warning border-2 bg-soft p-4 mb-4 d-flex flex-column mt-3">
-                                                <h5 class="fw-semibold mb-2">Item Ingredients/Raw Materials</h5>
-                                                <p class="mb-2">Enter the ingredienta and raw materials that will be consumed per serving for this perticuler product</p>
-
-                                            </div>
-                                        </div>
-
                                         <div class="col-12">
                                             <div class="">
                                                 <table class="table table-editable-1 align-middle table-edits">
@@ -567,25 +534,25 @@
                                                             <th>#</th>
                                                             <th>Ingredients/Raw Materials</th>
                                                             <th class="">UOM</th>
-                                                            <th class="">Quantity consumed Per serving</th>
+                                                            <th class="">Minimum Stock Order</th>
                                                             <th></th>
                                                         </tr>
                                                     </thead>
                                                     <tbody>
                                                         <tr data-id="1">
                                                             <td style="width: 80px">1.</td>
+                                                            <td class="">
+                                                                <input type="text " class="form-control " placeholder="Ingredient/Material" spellcheck="false" data-ms-editor="true">
+                                                            </td>
                                                             <td>
-                                                                <select class="form-control selectpicker form-select" data-live-search="true" title="Select Ingredients" data-style="form-select btn border">
+                                                                <select class="form-control selectpicker form-select" data-live-search="true" title="Select UOM" data-style="form-select btn border">
                                                                     <option value="">Raw Chicken</option>
                                                                     <option value="">Raw Sausage</option>   
                                                                     <option value="">Wheat flour</option>                                                               
                                                                 </select>
                                                             </td>
                                                             <td class="">
-                                                                <input type="text " class="form-control " placeholder="Unit Of Measurement" spellcheck="false" data-ms-editor="true">
-                                                            </td>
-                                                            <td class="">
-                                                                <input type="text " class="form-control " placeholder="Quantity Per Serving" spellcheck="false" data-ms-editor="true">
+                                                                <input type="text " class="form-control " placeholder="Minimum Stock Order" spellcheck="false" data-ms-editor="true">
                                                             </td>
 
                                                             <td></td>
@@ -594,19 +561,18 @@
 
                                                         <tr class="cloneCharges d-none">
                                                             <td style="width: 80px " class="categoryIndex ">#</td>
-
+                                                            <td class="">
+                                                                <input type="text " class="form-control " placeholder="Ingredient/Material" spellcheck="false" data-ms-editor="true">
+                                                            </td>
                                                             <td>
-                                                                <select class="form-control selectpicker" data-live-search="true" title="Select Ingredients" data-style="form-select btn border">
+                                                                <select class="form-control selectpicker" data-live-search="true" title="Select UOM" data-style="form-select btn border">
                                                                     <option value="">Raw Chicken</option>
                                                                     <option value="">Raw Sausage</option>   
                                                                     <option value="">Wheat flour</option>                                                               
                                                             </select>
                                                             </td>
                                                             <td class="">
-                                                                <input type="text " class="form-control " placeholder="Unit Of Measurement" spellcheck="false" data-ms-editor="true">
-                                                            </td>
-                                                            <td class="">
-                                                                <input type="text " class="form-control " placeholder="Quantity Per Serving" spellcheck="false" data-ms-editor="true">
+                                                                <input type="text " class="form-control " placeholder="Minimum Stock Order" spellcheck="false" data-ms-editor="true">
                                                             </td>
 
 
@@ -627,17 +593,21 @@
                                                 </table>
                                             </div>
                                         </div>
-                                        <div class="col-12 d-flex justify-content-end">
-                                            <button type="button" class="btn btn-outline-dark waves-effect waves-light mr-3">
-                                                <i class="bx bx-x font-size-16 align-middle me-2"></i> Clear Form
-                                            </button>
-                                            <div class="mx-2"></div>
-                                            <button type="button" class="btn btn-primary waves-effect waves-light">
-                                                <i class="bx bx-check-double font-size-16 align-middle me-2"></i> Add Item
-                                            </button>
-                                        </div>
+
+                                        
                                     </div>
 
+                                </div>
+                                <div class="card-footer bg-white">
+                                    <div class="col-12 d-flex justify-content-end">
+                                        <button type="button" class="btn btn-outline-dark waves-effect waves-light mr-3">
+                                            <i class="bx bx-x font-size-16 align-middle me-2"></i> Clear Form
+                                        </button>
+                                        <div class="mx-2"></div>
+                                        <button type="button" class="btn btn-primary waves-effect waves-light">
+                                            <i class="bx bx-check-double font-size-16 align-middle me-2"></i> Save Changes
+                                        </button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
