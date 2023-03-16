@@ -22,9 +22,6 @@
     <link href="assets/css/bootstrap.min.css" id="bootstrap-style" rel="stylesheet" type="text/css" />
     <!-- Bootstrap select styling -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/css/bootstrap-select.min.css">
-
-    <!-- date range picker -->
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
     <!-- Icons Css -->
     <link href="assets/css/icons.min.css" rel="stylesheet" type="text/css" />
     <!-- App Css-->
@@ -618,192 +615,91 @@
         <!-- Left Sidebar End -->
 
         <!-- modals -->
-            <!-- customer Details -->
-            <div class="modal fade" id="cashier-sales-details" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-                <div class="modal-dialog modal-md modal-dialog-centered">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="myLargeModalLabel">Sales Report For Alex Wanjala</h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <div class="modal-body">
-                            <div class="col-12">
-                                <address>
-                                    <strong>Collections Report For:</strong><br>
-                                    Kelvin Njuguna<br>
-                                    12345ASE <br>
-                                    email@mail.com, 0704 549 859<br>                                   
-                                   
-                                    <br><br>
-                                    For The Period: <span class="fw-semibold">1 Mar 2022, 12:00 AM To 30 Mar 2022, 11:59 PM</span>
-                                </address>
-                            </div>
-                            <div class="col-12">
-                                <div class="py-2 mt-3">
-                                    <h3 class="font-size-15 fw-bold">Report Summary</h3>
-                                </div>
-                            </div>
-                            <div class="col-12">
-                                <div class="table-responsive">
-                                    <table class="table table-nowrap invoice-table">
-                                       
-                                        <tbody>
-                                            <tr>
-                                                <th>Clients Served</th>
-                                                <td class="text-end">123</td>
-                                            </tr>
-
-                                            <tr>
-                                                <th>Items Sold</th>
-                                                <td class="text-end">900 Units</td>
-                                            </tr>
-                                            <tr>
-                                                <th>MPESA Collections</th>
-                                                <td class="text-end">KES 21,005</td>
-                                            </tr>
-                                            <tr>
-                                                <th>Cash Collections</th>
-                                                <td class="text-end">KES 13,885</td>
-                                            </tr>
-                                            <tr class="'text-uppercase">
-                                                <th>Total Collections</th>
-                                                <th class="text-end">KES 34,890</th>
-                                            </tr>
-
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="modal-footer">
-                            <button class="btn btn-primary waves-effect waves-light w-100"><i class="mdi mdi-printer font-size-16 align-middle me-2"></i> Print Cashier Sales Card</button>
-                        </div>
-
-                    </div>
-                    <!-- /.modal-content -->
-                </div>
-            </div>
-            <!-- customer Details -->
-
-            <!-- Transaction Details -->
-            <div class="modal fade" id="transaction-details" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <!-- new menu category modal -->
+            <div class="modal fade" id="new-category" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
                 <div class="modal-dialog modal-dialog-centered" role="document">
                     <div class="modal-content border-radius-0">
                         <div class="modal-header d-none">
-                            <h5 class="modal-title" id="exampleModalCenterTitle">Transaction Details</h5>
-                            <span class="close font-28 cursor-pointer" data-bs-dismiss="modal" aria-bs-label="Close">
+                            <h5 class="modal-title" id="exampleModalCenterTitle">Add Menu Category</h5>
+                            <span class="close font-28 cursor-pointer" data-dismiss="modal" aria-label="Close">
                                  <span aria-hidden="true">&times;</span>
                             </span>
                         </div>
-                        <div class="modal-body text-capitalize">
-                            <div class="d-flex justify-content-between align-items-center">
-                                <span class="badge rounded-pill badge-soft-success text-uppercase">MPESA Transaction</span>
-                                <span class="close font-28 cursor-pointer" data-dismiss="modal" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                               </span>
-                            </div>
-                            <div class="payment-panel-parent">
-                                <div class="d-flex justify-content-between align-items-center flex-column">
-                                    <div class="flex-shrink-0 me-3 mt-4 mb-3">
-                                        <div class="avatar-md mx-auto "><span class="avatar-title rounded-circle bg-random font-size-24 ">CS</span></div>
-                                        <img class="rounded-circle avatar-sm d-none" src="assets/images/users/avatar-5.jpg" alt="Generic placeholder image" height="65">
+                        <div class="modal-body pt-4">
+                            <div class="text-center mb-4">
+                                <div class="avatar-md mx-auto mb-4">
+                                    <div class="avatar-title bg-light rounded-circle text-primary h1">
+                                        <i class="bx bx-list-plus "></i>
                                     </div>
-                                    <h4 class="mb-0 text-uppercase">Calistus Simiyu</h4>
-                                    <p class="text-muted text-uppercase mb-1">Cashier ID: 1234HYI</p>
-                                    <span class="text-uppercase badge badge-soft-info mt-4">Transaction Amount</span>
-                                    <h2 class=" text-uppercase mt-1 mb-4"><span class="">KES 450.00</span></h2>
-                                   
                                 </div>
-                                <div
-                                    class="px-4 mb-4 transactions-details-table text-left d-flex justify-items-center align-items-center w-100 px-sm-0">
-                                    <div class="d-flex flex-column boarder-grey border-1 justify-content-center align-items-center w-100  p-3">
-                                        <table class="table table-borderless mb-0 mt-0 table-sm single-receipt">
-                                            <thead class="table-border">
-                                                <tr>
-                                                    <th colspan="4" class="text-black text-uppercase pb-0 mb-0">
-                                                        <blockquote class=""><span class="text-muted">Receipt No.</span> F32GDV9GC0
-                                                        </blockquote>
-                                                    </th>
-                                                </tr>
-                                                <tr>
-                                                    <th scope="col" colspan="2">Items</th>
-                                                    <th scope="col" class="text-center">Qty</th>
-                                                    <th class="text-right">Price</th>
-                                                    <th scope="col" class="text-right">Total</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr class="text-capitalize">
-                                                    <th scope="row">1.</th>
-                                                    <td>French Fries</td>
-                                                    <td class="text-center">3</td>
-                                                    <td class="text-right">KES&nbsp;100.00</td>
-                                                    <td class="text-right">KES&nbsp;300.00</td>
-                                                </tr>
-                                                <tr class="text-capitalize">
-                                                    <th scope="row">2.</th>
-                                                    <td>Samosa</td>
-                                                    <td class="text-center">3</td>
-                                                    <td class="text-right">KES&nbsp;50.00</td>
-                                                    <td class="text-right">KES&nbsp;150.00</td>
-                                                </tr>
-                                            </tbody>
+
+                                <div class="row justify-content-center">
+                                    <div class="col-xl-10">
+                                        <h4 class="text-primary">Add Menu category</h4>
+                                        <p class="text-muted font-size-14 mb-4">Write Down the Name to The new Menu Category Below</p>
+
+                                        <div class="input-group bg-light rounded">
+                                            <input type="email" class="form-control bg-transparent border-0" placeholder="Category Name" aria-label="Recipient's username" aria-describedby="button-addon2">
                                             
-                                            <tfoot class="table-borderless">
-                                                <tr class="table-bo">
-                                                    <th colspan="2" class="pt-3 text-uppercase">Total</th>
-                                                    <th class="text-center pt-3">6</th>
-                                                    <th colspan="2" class="text-right pt-3">KES&nbsp;450.00</th>
-                                                </tr>
-                                                <tr>
-                                                    <th colspan="2" class="pt-3 text-uppercase">MPESA Paid</th>
-                                                    <th class="text-center pt-3"></th>
-                                                    <th colspan="2" class="text-right pt-3">KES&nbsp;400</th>
-                                                </tr>
-
-                                                <tr>
-                                                    <th colspan="2" class="pt-3 text-uppercase">Cash Paid</th>
-                                                    <th class="text-center pt-3"></th>
-                                                    <th colspan="2" class="text-right pt-3">KES&nbsp;100</th>
-                                                </tr>
-
-                                                <tr>
-                                                    <th colspan="2" class="pt-3 text-uppercase">Change</th>
-                                                    <th class="text-center pt-3"></th>
-                                                    <th colspan="2" class="text-right pt-3">KES 50</th>
-                                                </tr>
-                                            </tfoot>
-                                        </table>
-                                    </div>
-                                </div>
-                                <p class="text-uppercase mt-3">MPESA Number <span class="fw-semibold">0704 549 859</span> </p>
-                                <div class="px-4 pt-3 mt-3 px-sm-0">
-                                    <div
-                                        class="border-1px-solid bg-light px-4 py-3 mb-3 d-flex align-items-center justify-content-between border-15px">
-                                        <div class="d-flex align-items-center">
-                                            <div class="d-flex align-items-center">
-                                                <div class="avatar-xs me-3"><span
-                                                        class="avatar-title rounded-circle bg-danger text-white font-size-18"><i
-                                                            class="mdi mdi-arrow-down-bold"></i></span></div>
-                                            </div>
-                                            <div class="text-left">
-                                                <h6 class="mb-0 text-capitalize">Customer <span class="fw-semibold">Alex Wanjala</span>
-                                                    <small> ( Customer Code: 12345HTGF )</small></h6>
-                                                <p class="mb-0 p-0 text-capitalize">Yesterday at 9:08 PM</p>
-                                            </div>
+                                            <button class="btn btn-primary" type="button" id="button-addon2" data-dismiss="modal" aria-label="Close">
+                                                <i class="bx bx-plus"></i> Add
+                                            </button>
+                                            
                                         </div>
+                                        
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="modal-footer">
-                            <button class="btn btn-primary waves-effect waves-light w-100"><i class="mdi mdi-printer font-size-16 align-middle me-2"></i> Print Receipt</button>
+
                         </div>
 
                     </div>
                 </div>
             </div>
-            <!-- Transaction Details -->
+            <!-- new menu category modal -->
+
+            <!-- editing the name to a menu category -->
+            <div class="modal fade" id="edit-category" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content border-radius-0">
+                        <div class="modal-header d-none">
+                            <h5 class="modal-title" id="exampleModalCenterTitle">Edit Menu Category</h5>
+                            <span class="close font-28 cursor-pointer" data-dismiss="modal" aria-label="Close">
+                                 <span aria-hidden="true">&times;</span>
+                            </span>
+                        </div>
+                        <div class="modal-body pt-4">
+                            <div class="text-center mb-4">
+                                <div class="avatar-md mx-auto mb-4">
+                                    <div class="avatar-title bg-light rounded-circle text-dark h1">
+                                        <i class="mdi mdi-clipboard-edit-outline"></i>
+                                    </div>
+                                </div>
+
+                                <div class="row justify-content-center">
+                                    <div class="col-xl-10">
+                                        <h4 class="text-dark">Edit Menu Category</h4>
+                                        <p class="text-muted font-size-14 mb-4">Write below the prefered name for this Menu Category</p>
+
+                                        <div class="input-group bg-light rounded">
+                                            <input type="email" class="form-control bg-transparent border-0" placeholder="Category Name" aria-label="Recipient's username" aria-describedby="button-addon2">
+                                            
+                                            <button class="btn btn-primary" type="button" id="button-addon2" data-dismiss="modal" aria-label="Close">
+                                                <i class="mdi mdi-check-all"></i> Save
+                                            </button>
+                                            
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <!-- editing the name to a menu categor -->
         <!-- end of modals -->
 
 
@@ -820,13 +716,14 @@
                     <div class="row">
                         <div class="col-12">
                             <div class="page-title-box d-sm-flex align-items-center justify-content-between">
-                                <h4 class="mb-sm-0 font-size-18">Cashier Sales Reports</h4>
+                                <h4 class="mb-sm-0 font-size-18">Materials/Ingredients Stock Movement</h4>
 
                                 <div class="page-title-right">
                                     <ol class="breadcrumb m-0">
                                         <li class="breadcrumb-item"><a href="javascript: void(0);">Dashboards</a></li>
-                                        <li class="breadcrumb-item"><a href="javascript: void(0);">Cashier Reports</a></li>
-                                        <li class="breadcrumb-item active">Cashier Sales</li>
+                                        <li class="breadcrumb-item"><a href="javascript: void(0);">Stock Movement</a></li>
+                                        
+                                        <li class="breadcrumb-item active">Materials/Ingredients Stock Movement</li>
                                     </ol>
                                 </div>
 
@@ -838,12 +735,9 @@
 
                     <!-- eTransactions table -->
 
-                   
-
                     <div class="row">
                         <div class="col-12">
                             <div class="card">
-                                
                                 <div class="card-header py-3">
                                     <div class="d-flex tbl-filter-container justify-content-between align-items-center py-0 m-0">
                                         <div class="d-flex the-filters">
@@ -885,30 +779,31 @@
                                 </div>
                                 <div class="card-body">
                                     <div class="table-responsive">
-                                        <table id="datatable-buttons" class="table table-hover table-striped">
+                                        <table id="datatable-buttons" class="table table-hover">
                                             <thead class="table-dark text-capitalize">
                                                 <tr>
                                                     <th>#</th>
-                                                    <th>Cashier</th>
-                                                    <th>Staff Id</th>
-                                                    <th class="">Clients Served</th>
-                                                    <th>No. Of Items Sold</th>
-                                                    <th class="text-right">MPESA</th>
-                                                    <th class="text-right">CASH</th>
+                                                    <th>Item name</th>
+                                                    <th>Opening</th>
+                                                    <th class="text-right">Opening Val</th>
+                                                    <th>Sales</th>
                                                     <th class="text-right">Sales Val.</th>
-                                                    <th></th>                                                   
+                                                    <th>Closing</th>
+                                                    <th class="text-right">Closing Val</th>
+                                                    
+                                                    
                                                 </tr>
                                             </thead>
                                             <tfoot class="table-light">
                                                 <tr>
-                                                    <th colspan="3">22 Cashiers</th>
-                                                    <th class="">9,215 Clients</th>
-                                                    <th class="">76,900 Units</th>
-                                                    <th class="table-success text-right">KES 789,099</th>
-                                                    <th class="text-right">KES 679,055</th>
-                                                    <th class="table-info text-right">KES 1,468,154</th>
-                                                    <th></th>
-                                                    
+                                                    <th class="text-uppercase">Totals</th>
+                                                    <th>22 Items</th>
+                                                    <th class="table-info">215 Units</th>
+                                                    <th class="text-right table-info">KES 65,724</th>
+                                                    <th class="table-warning">128 Units</th>
+                                                    <th class="text-right table-warning">KES 50,055</th>
+                                                    <th class="table-success">87 Units</th>
+                                                    <th class="text-right table-success">KES 49,559</th>
                                                   </tr>
                                             </tfoot>
     
@@ -916,112 +811,79 @@
                                             <tbody class="table-sm">
                                               <tr>
                                                 <th>1.</th>
-                                                <td>Alex Wanjala</td>
-                                                <td class="">1234567</td>
-                                                <td class="">234</td>
-                                                <td class="">923</td>
-
-                                                <td class="text-right table-success text-uppercase">KEs 21,005</td>
-                                                <td class="text-right table-light text-uppercase">kes 13,885</td>
-                                                <td class="text-right table-info fw-semibold text-uppercase">KES 34,890</td>
-                                                <td>
-                                                    <div class="d-flex justify-content-end">
-                                                        <button data-toggle="modal" data-target="#cashier-sales-details" class="btn btn-sm btn-success waves-effect wave-light mx-2"><i class="mdi mdi-eye-outline"></i> Open</button>
-                                                        <button  class="btn btn-sm btn-dark waves-effect wave-light"><i class="mdi mdi-printer"></i> Print</button>
-                                                    </div>
-                                                </td>                                                
+                                                <td>Black Coffee</td>
+                                                <td class="table-info">45 Units</td>
+                                                <td class="text-right table-info">KES 34,890</td>
+                                                <td class="table-warning">15 Units</td>
+                                                <td class="text-right table-warning">KES 34,890</td>
+                                               <td class="table-success">30 Units</td>
+                                                <td class="text-right table-success">KES 34,890</td>
+                                               
+                                               
                                               </tr>
-
                                               <tr>
                                                 <th>2.</th>
-                                                <td>Felix Amboso</td>
-                                                <td class="">1234567</td>
-                                                <td class="">234</td>
-                                                <td class="">923</td>
-
-                                                <td class="text-right table-success text-uppercase">KEs 21,005</td>
-                                                <td class="text-right table-light text-uppercase">kes 13,885</td>
-                                                <td class="text-right table-info fw-semibold text-uppercase">KES 34,890</td>
-                                                <td>
-                                                    <div class="d-flex justify-content-end">
-                                                        <button data-toggle="modal" data-target="#cashier-sales-details" class="btn btn-sm btn-success waves-effect wave-light mx-2"><i class="mdi mdi-eye-outline"></i> Open</button>
-                                                        <button  class="btn btn-sm btn-dark waves-effect wave-light"><i class="mdi mdi-printer"></i> Print</button>
-                                                    </div>
-                                                </td>                                                
+                                                <td>Mandazi</td>
+                                                <td class="table-info">30 Units</td>
+                                                <td class="text-right table-info">KES 23,000</td>
+                                                <td class="table-warning">15 Units</td>
+                                                <td class="text-right table-warning">KES 12,500</td>
+                                                <td class="table-success">15 Units</td>
+                                                <td class="text-right table-success">KES 12,500</td>
+                                               
+                                               
                                               </tr>
-
                                               <tr>
                                                 <th>3.</th>
-                                                <td>Joseph Ndua</td>
-                                                <td class="">1234567</td>
-                                                <td class="">234</td>
-                                                <td class="">923</td>
-
-                                                <td class="text-right table-success text-uppercase">KEs 21,005</td>
-                                                <td class="text-right table-light text-uppercase">kes 13,885</td>
-                                                <td class="text-right table-info fw-semibold text-uppercase">KES 34,890</td>
-                                                <td>
-                                                    <div class="d-flex justify-content-end">
-                                                        <button data-toggle="modal" data-target="#cashier-sales-details" class="btn btn-sm btn-success waves-effect wave-light mx-2"><i class="mdi mdi-eye-outline"></i> Open</button>
-                                                        <button  class="btn btn-sm btn-dark waves-effect wave-light"><i class="mdi mdi-printer"></i> Print</button>
-                                                    </div>
-                                                </td>                                                
+                                                <td>Donuts</td>
+                                                <td class="table-info">5 Units</td>
+                                                <td class="text-right table-info">KES 325</td>
+                                                <td class="table-warning">0 Units</td>
+                                                <td class="text-right table-warning">KES 0.00</td>
+                                               <td class="table-success">5 Units</td>
+                                                <td class="text-right table-success">KES 325</td>
+                                               
+                                               
                                               </tr>
-
                                               <tr>
                                                 <th>4.</th>
-                                                <td>Alexarder Kanyi</td>
-                                                <td class="">1234567</td>
-                                                <td class="">234</td>
-                                                <td class="">923</td>
-
-                                                <td class="text-right table-success text-uppercase">KEs 21,005</td>
-                                                <td class="text-right table-light text-uppercase">kes 13,885</td>
-                                                <td class="text-right table-info fw-semibold text-uppercase">KES 34,890</td>
-                                                <td>
-                                                    <div class="d-flex justify-content-end">
-                                                        <button data-toggle="modal" data-target="#cashier-sales-details" class="btn btn-sm btn-success waves-effect wave-light mx-2"><i class="mdi mdi-eye-outline"></i> Open</button>
-                                                        <button  class="btn btn-sm btn-dark waves-effect wave-light"><i class="mdi mdi-printer"></i> Print</button>
-                                                    </div>
-                                                </td>                                                
+                                                <td>Milk Tea</td>
+                                                <td class="table-info">65 Units</td>
+                                                <td class="text-right table-info">KES 1,625</td>
+                                                <td class="table-warning">55 Units</td>
+                                                <td class="text-right table-warning">KES 1,375</td>
+                                               <td class="table-success">10 Units</td>
+                                                <td class="text-right table-success">KES 250</td>
+                                               
+                                               
                                               </tr>
-
                                               <tr>
                                                 <th>5.</th>
-                                                <td>Mwangi</td>
-                                                <td class="">1234567</td>
-                                                <td class="">234</td>
-                                                <td class="">923</td>
-
-                                                <td class="text-right table-success text-uppercase">KEs 21,005</td>
-                                                <td class="text-right table-light text-uppercase">kes 13,885</td>
-                                                <td class="text-right table-info fw-semibold text-uppercase">KES 34,890</td>
-                                                <td>
-                                                    <div class="d-flex justify-content-end">
-                                                        <button data-toggle="modal" data-target="#cashier-sales-details" class="btn btn-sm btn-success waves-effect wave-light mx-2"><i class="mdi mdi-eye-outline"></i> Open</button>
-                                                        <button  class="btn btn-sm btn-dark waves-effect wave-light"><i class="mdi mdi-printer"></i> Print</button>
-                                                    </div>
-                                                </td>                                                
+                                                <td>Uji Moto</td>
+                                                <td class="table-info">56 Units</td>
+                                                <td class="text-right table-info">KES 1,680</td>
+                                                <td class="table-warning">43 Units</td>
+                                                <td class="text-right table-warning">KES 1,290</td>
+                                               <td class="table-success">13 Units</td>
+                                                <td class="text-right table-success">KES 390</td>
+                                               
+                                               
                                               </tr>
-
                                               <tr>
                                                 <th>6.</th>
-                                                <td>Teresia Wanjiru</td>
-                                                <td class="">1234567</td>
-                                                <td class="">234</td>
-                                                <td class="">923</td>
-
-                                                <td class="text-right table-success text-uppercase">KEs 21,005</td>
-                                                <td class="text-right table-light text-uppercase">kes 13,885</td>
-                                                <td class="text-right table-info fw-semibold text-uppercase">KES 34,890</td>
-                                                <td>
-                                                    <div class="d-flex justify-content-end">
-                                                        <button data-toggle="modal" data-target="#cashier-sales-details" class="btn btn-sm btn-success waves-effect wave-light mx-2"><i class="mdi mdi-eye-outline"></i> Open</button>
-                                                        <button  class="btn btn-sm btn-dark waves-effect wave-light"><i class="mdi mdi-printer"></i> Print</button>
-                                                    </div>
-                                                </td>                                               
+                                                <td>Rollex</td>
+                                                <td class="table-info">14 Units</td>
+                                                <td class="text-right table-info">KES 1,204</td>
+                                                <td class="table-warning">0 Units</td>
+                                                <td class="text-right table-warning">0.00</td>
+                                               <td class="table-success">14 Units</td>
+                                                <td class="text-right table-success">KES 1,204</td>
+                                               
+                                               
                                               </tr>
+    
                                              
+    
                                             </tbody>
                                         </table>
                                     </div>
@@ -1272,11 +1134,6 @@
     <script src="assets/libs/bootstrap-touchspin/jquery.bootstrap-touchspin.min.js"></script>
     <script src="assets/libs/bootstrap-maxlength/bootstrap-maxlength.min.js"></script>
     <script src="assets/libs/%40chenfengyuan/datepicker/datepicker.min.js"></script>
-
-    <!-- date range picker -->
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
-    <!-- end of dtae range picker -->
 
     <!-- form advanced init -->
     <script src="assets/js/pages/form-advanced.init.js"></script>
