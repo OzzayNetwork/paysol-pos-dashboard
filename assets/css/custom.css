@@ -1184,3 +1184,90 @@
             .daterangepicker .ranges li.active{
                  background:#2fb895 !important
             }
+
+            /* the messenger */
+            .email-fullscreen{
+                border-radius: 0px;
+                height: 100%;
+                width: 100%;
+                max-width: 100% !important;
+                position: initial !important;
+               
+            }
+            .email-overlay-fullscreen{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 5rem;
+            }
+            
+            .email-overlay>.header-item {
+                height: 50px;
+                color: white;
+            }
+            
+            .email-overlay .card-header h4,
+            .email-overlay .card-header .noti-icon i {
+                color: white;
+            }
+
+            .the-message-maker {
+                position: fixed;
+                bottom: 0px;
+                right: 0px;
+                margin-bottom: 0px;
+                max-width: 600px;
+            }
+
+            .upload-contacts .modal-content,
+            .upload-contacts .modal-header,
+            .selected-contacts .modal-header,
+            .selected-contacts .modal-content {
+                border-radius: 0px;
+                border: none;
+            }
+
+              
+            .the-selected-contacts {
+                max-width: 426px;
+                /* border: 1px solid; */
+                /* padding: 2px 5px; */
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: clip;
+                text-overflow: ellipsis;
+                /* height: 25px; */
+                display: block;
+                width: auto;
+                max-width: 80vw;
+            }
+            
+            .the-msg {
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: clip;
+                text-overflow: ellipsis;
+                width: auto;
+                max-width: 10vw;
+            }
+            
+            .the-msg-2 {
+                max-width: 40vw;
+            }
+            
+            .the-msg-2 p {
+                margin-bottom: .3rem;
+            }
+            
+            .font-16px {
+                font-size: 16px !important;
+            }
+            .selected-contacts .avatar-xs {
+                height: 2rem;
+                width: 2rem;
+            }
+            
+            .selected-contacts .table>:not(caption)>*>* {
+                padding: 0.5rem .5rem;
+            }
+            

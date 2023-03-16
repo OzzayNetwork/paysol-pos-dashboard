@@ -18,9 +18,7 @@ $(window).on('load', function() {
 
     });
 
-    $('body').on('click', '.minimize', function() {
-        $(this).parent().parent().parent().parent().siblings().toggleClass('d-none');
-    });
+    
     $("body").on('change', '.contacts-table tbody input', function() {
         var theTable = $(this).parent().parent().parent().parent().parent();
         if ($(this).is(':checked')) {
@@ -68,6 +66,28 @@ $(window).on('load', function() {
     })
 
 });
+
+$(document).ready(function(){
+    $('body').on('click','.fullscreen', function(){
+        // alert("Fullscreen clicked")
+        $('.the-message-maker').toggleClass('email-fullscreen')
+        $('.email-overlay').toggleClass('email-overlay-fullscreen')
+        $('.email-overlay').removeClass('p-relative')
+        $(this).parent().parent().parent().parent().siblings().removeClass('d-none');
+        $(this).children('i').toggleClass("bx-exit-fullscreen")
+        $(this).children('i').toggleClass("bx-fullscreen")
+    })
+
+    $('body').on('click', '.minimize', function() {
+        $(this).parent().parent().parent().parent().siblings().toggleClass('d-none');
+        $('.email-overlay').toggleClass('p-relative')
+        $('.the-message-maker').removeClass('email-fullscreen')
+        $('.email-overlay').removeClass('email-overlay-fullscreen')
+
+        $(".fullscreen").children('i').removeClass("bx-exit-fullscreen")
+        $(".fullscreen").children('i').addClass("bx-fullscreen")
+    });
+})
 $(document).ready(function(){
     // date range picker
     $(function() {
