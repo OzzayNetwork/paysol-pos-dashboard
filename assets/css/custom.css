@@ -1163,3 +1163,24 @@
               .mouse-pointer{
                 cursor:pointer !important;
               }
+              .tb-verticle-middle td{
+                vertical-align:middle
+            }
+            .tbl-filter-container {
+                /* padding: 1rem; */
+                border: 1px solid #e8e8e8;
+                margin:.75rem .75rem;
+            }
+            .the-filters .dropdown-menu{
+                border-radius: 0px;
+                border-top: 3px solid #2fb895;
+            }
+            .the-filters button i{
+                border-right: 1px solid #e8e8e8; 
+            }
+            tr.active{
+                background-color: #8080802b;
+            }
+            .daterangepicker .ranges li.active{
+                 background:#2fb895 !important
+            }

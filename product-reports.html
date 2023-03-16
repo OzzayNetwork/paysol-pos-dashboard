@@ -22,6 +22,9 @@
     <link href="assets/css/bootstrap.min.css" id="bootstrap-style" rel="stylesheet" type="text/css" />
     <!-- Bootstrap select styling -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/css/bootstrap-select.min.css">
+
+    <!-- date range picker -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
     <!-- Icons Css -->
     <link href="assets/css/icons.min.css" rel="stylesheet" type="text/css" />
     <!-- App Css-->
@@ -607,48 +610,72 @@
         <!-- Left Sidebar End -->
 
         <!-- modals -->
-            <!-- new menu category modal -->
-            <div class="modal fade" id="new-category" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <!-- customer Details -->
+            <div class="modal fade" id="customer-details" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
                 <div class="modal-dialog modal-dialog-centered" role="document">
                     <div class="modal-content border-radius-0">
                         <div class="modal-header d-none">
-                            <h5 class="modal-title" id="exampleModalCenterTitle">Add Menu Category</h5>
+                            <h5 class="modal-title" id="exampleModalCenterTitle">Transaction Details</h5>
                             <span class="close font-28 cursor-pointer" data-dismiss="modal" aria-label="Close">
                                  <span aria-hidden="true">&times;</span>
                             </span>
                         </div>
-                        <div class="modal-body pt-4">
-                            <div class="text-center mb-4">
-                                <div class="avatar-md mx-auto mb-4">
-                                    <div class="avatar-title bg-light rounded-circle text-primary h1">
-                                        <i class="bx bx-list-plus "></i>
+                        <div class="modal-body text-capitalize">
+                            <div class="d-flex justify-content-end align-items-center">
+                                <span class="badge rounded-pill badge-soft-success text-uppercase d-none">MPESA Transaction</span>
+                                <span class="close font-28 cursor-pointer" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                               </span>
+                            </div>
+                            <div class="payment-panel-parent">
+                                <div class="d-flex justify-content-between align-items-center flex-column">
+                                    <div class="flex-shrink-0 me-3 mt-4 mb-3">
+                                        <div class="avatar-md mx-auto "><span class="avatar-title rounded-circle bg-random font-size-24 ">AW</span></div>
+                                        <img class="rounded-circle avatar-sm d-none" src="assets/images/users/avatar-5.jpg" alt="Generic placeholder image" height="65">
                                     </div>
+                                    <h4 class="mb-0 text-uppercase">Alex Wanjala</h4>
+                                    <p class="text-muted text-uppercase mb-1">Customer ID: 1234HYI</p>
+                                    <span class="text-uppercase badge badge-soft-dark mt-4">Loyalty Points</span>
+                                    <h2 class=" text-uppercase mt-1 mb-2"><span class="">25.34</span></h2>
+                                   
                                 </div>
-
-                                <div class="row justify-content-center">
-                                    <div class="col-xl-10">
-                                        <h4 class="text-primary">Add Menu category</h4>
-                                        <p class="text-muted font-size-14 mb-4">Write Down the Name to The new Menu Category Below</p>
-
-                                        <div class="input-group bg-light rounded">
-                                            <input type="email" class="form-control bg-transparent border-0" placeholder="Category Name" aria-label="Recipient's username" aria-describedby="button-addon2">
-                                            
-                                            <button class="btn btn-primary" type="button" id="button-addon2" data-dismiss="modal" aria-label="Close">
-                                                <i class="bx bx-plus"></i> Add
-                                            </button>
-                                            
+                                
+                                <p class="text-uppercase mt-2 text-center">Loyalty Points Value <span class="fw-semibold">KES 5.00</span> </p>
+                                <div class="px-4 pt-3 mt-3 px-sm-0">
+                                    <div class="border-1px-solid bg-light px-4 py-3 mb-3 d-flex align-items-center justify-content-between border-15px">
+                                        <div class="d-flex align-items-center">
+                                            <div class="d-flex align-items-center">
+                                                <div class="avatar-xs me-3">
+                                                    <span class="avatar-title rounded-circle bg-success text-white font-size-18"><i class="mdi mdi-phone"></i></span>
+                                                </div>
+                                            </div>
+                                            <div class="text-left">
+                                                <h6 class="mb-0 text-capitalize">Phone Number</h6>
+                                                <p class="mb-0 p-0 text-capitalize">0704 549 859</p>
+                                            </div>
                                         </div>
-                                        
+                                    </div>
+
+                                    <div class="border-1px-solid bg-light px-4 py-3 mb-3 d-flex align-items-center justify-content-between border-15px">
+                                        <div class="d-flex align-items-center">
+                                            <div class="d-flex align-items-center">
+                                                <div class="avatar-xs me-3">
+                                                    <span class="avatar-title rounded-circle bg-info text-white font-size-18"><i class="mdi mdi-email-outline"></i></span>
+                                                </div>
+                                            </div>
+                                            <div class="text-left">
+                                                <h6 class="mb-0 text-capitalize">Email Address</h6>
+                                                <p class="mb-0 p-0 text-capitalize">email@mail.com</p>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-
                         </div>
-
                     </div>
                 </div>
             </div>
-            <!-- new menu category modal -->
+            <!-- customer Details -->
 
             <!-- Transaction Details -->
             <div class="modal fade" id="transaction-details" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
@@ -808,12 +835,73 @@
                     <div class="row">
                         <div class="col-12">
                             <div class="card">
+                                
                                 <div class="card-header py-3">
-                                    <div class="d-flex justify-content-between align-items-center">
-                                        <div class="">
-                                            <h4 class="card-title">Sales Report</h4>
+                                    <div class="d-flex tbl-filter-container justify-content-between align-items-center py-0 m-0">
+                                        <div class="d-flex the-filters">
+                                            <div>
+                                                <div class="dropdown d-inline-block">
+                                                    <button type="button" class="btn header-item h-auto px-4 waves-effect d-flex justify-content-center align-items-center pb-4 pt-4 pr-0" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                        <span class="d-none d-xl-inline-block ms-1 prof-name text-left mr-3 pe-4">
+                                                            <span class="text-primary">Filter By Cashier</span>
+                                                                <h5 class="mb-0 pb-0 text-black text-capitalize">All Cashiers</h5>
+                                                        </span>
+                                                        <i class="mdi mdi-chevron-down d-xl-inline-block font-size-20 pl-4 pr-4"></i>
+                                                    </button>
+                                                    <div class="dropdown-menu dropdown-menu-end w-100 text-capitalize">
+                                                        <a class="d-flex px-3 pb-2 waves-effect dropdown-item active" href="javascript: void(0);"><span>All Cashiers</span></a>
+                                                        <a class="d-flex px-3 pb-2 waves-effect dropdown-item" href="javascript: void(0);"><span>Alex Wanjala</span></a>
+                                                        <a class="d-flex px-3 pb-2 waves-effect dropdown-item" href="javascript: void(0);"><span>Kelvin Kiptum</span></a>
+                                                        <a class="d-flex px-3 pb-2 waves-effect dropdown-item" href="javascript: void(0);"><span>Andrew Kinoti</span></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <div class="dropdown d-inline-block">
+                                                    <button type="button" class="btn header-item h-auto px-4 waves-effect d-flex justify-content-center align-items-center pb-4 pt-4 pr-0" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                        <span class="d-none d-xl-inline-block ms-1 prof-name text-left mr-3 pe-4">
+                                                            <span class="text-primary">Filter By Transaction</span>
+                                                            <h5 class="mb-0 pb-0 text-black text-capitalize">All Transactions</h5>
+                                                        </span>
+                                                        <i class="mdi mdi-chevron-down d-xl-inline-block font-size-20 pl-4 pr-4"></i>
+                                                    </button>
+                                                    <div class="dropdown-menu dropdown-menu-end w-100 text-capitalize" >
+                                                        <a class="dropdown-item" href="javascript: void(0);"><span>Mpesa</span></a>
+                                                        <a class="dropdown-item" href="javascript: void(0);"><span>Cash</span></a>
+                                                        <a class="dropdown-item active" href="javascript: void(0);"><span>Split</span></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <div class="dropdown d-inline-block">
+                                                    <button type="button"class="btn header-item h-auto px-4 waves-effect d-flex justify-content-center align-items-center pb-4 pt-4 pr-0" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                        <span class="d-none d-xl-inline-block ms-1 prof-name text-left mr-3 pe-4">
+                                                            <span class="text-primary">Filter By Client</span>
+                                                            <h5 class="mb-0 pb-0 text-black">Andrew Mwangi</h5>
+                                                        </span>
+                                                        <i class="mdi mdi-chevron-down d-xl-inline-block font-size-20 pl-4 pr-4"></i>
+                                                    </button>
+                                                    <div class="dropdown-menu dropdown-menu-end w-100 text-capitalize">
+                                                        <a class="dropdown-item active" href="javascript: void(0);"><span>All Clients</span></a>
+                                                        <a class="dropdown-item" href="javascript: void(0);"><span>Simiren Nkere</span></a>
+                                                        <a class="dropdown-item" href="javascript: void(0);"><span>John Mwangi</span></a>
+                                                        <a class="dropdown-item" href="javascript: void(0);"><span>Joy Mwaura</span></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <div class="dropdown d-inline-block"><button type="button"
+                                                        class="btn header-item h-auto px-4 waves-effect d-flex justify-content-center align-items-center pb-4 pt-4 pr-0"
+                                                        data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="reportrange"><span
+                                                            class="d-none d-xl-inline-block ms-1 prof-name text-left mr-3 pe-4"><span
+                                                                class="text-primary">Filter By Date</span>
+                                                            <h5 class="mb-0 pb-0 text-black selected-date">Feb 15, 2023 - Mar 16, 2023</h5>
+                                                        </span><i class="mdi mdi-chevron-down d-xl-inline-block font-size-20 pl-4 pr-4"></i></button></div>
+                                            </div>
                                         </div>
-                                        
+                                        <div class="text-right text-uppercase pr-4"><button type="button"
+                                                class="btn btn-outline-white waves-effect waves-light text-uppercase"><i
+                                                    class="mdi mdi-refresh font-size-24 align-middle me-2"></i> Reset Filters</button></div>
                                     </div>
                                 </div>
                                 <div class="card-body">
@@ -869,12 +957,18 @@
                                                     <span class="fw-semibold text-uppercase">KES 610</span>
                                                 </td>
                                                 <td>
-                                                    <button data-toggle="modal" data-target="#transaction-details" class="btn btn-sm btn-info waves-effect wave-light">
-                                                        <i class="mdi mdi-eye-outline"></i> View Details
-                                                    </button>
-                                                    <button class="btn btn-sm btn-success waves-effect wave-light mx-2">
-                                                        <i class="mdi mdi-printer"></i> Print Receipt
-                                                    </button>
+                                                    <div class="dropdown">
+                                                        <a class="text-muted font-size-16" role="button" data-bs-toggle="dropdown" aria-haspopup="true">
+                                                            <i class="bx bx-dots-vertical-rounded"></i>
+                                                        </a>
+
+                                                        <div class="dropdown-menu dropdown-menu-end">
+                                                            <a class="dropdown-item" href="#" data-toggle="modal" data-target="#transaction-details"><i class="font-size-15 mdi mdi-eye-plus-outline me-3"></i>Detailed view</a>
+                                                            <a class="dropdown-item" href="#"><i class="font-size-15 mdi mdi-printer me-3"></i>Print Receipt</a>
+                                                            <a class="dropdown-item" href="user-details.html"><i class="font-size-15 mdi mdi-calculator me-3"></i>Cashier Details</a>
+                                                            <a class="dropdown-item" href="#" data-toggle="modal" data-target="#customer-details"><i class="font-size-15 mdi mdi-account me-3"></i>Customer Details</a>
+                                                        </div>
+                                                    </div>
                                                 </td>
                                               </tr>
                                               <tr>
@@ -897,12 +991,18 @@
                                                     <span class="fw-semibold text-uppercase">KES 610</span>
                                                 </td>
                                                 <td>
-                                                    <button data-toggle="modal" data-target="#transaction-details" class="btn btn-sm btn-info waves-effect wave-light">
-                                                        <i class="mdi mdi-eye-outline"></i> View Details
-                                                    </button>
-                                                    <button class="btn btn-sm btn-success waves-effect wave-light mx-2">
-                                                        <i class="mdi mdi-printer"></i> Print Receipt
-                                                    </button>
+                                                    <div class="dropdown">
+                                                        <a class="text-muted font-size-16" role="button" data-bs-toggle="dropdown" aria-haspopup="true">
+                                                            <i class="bx bx-dots-vertical-rounded"></i>
+                                                        </a>
+
+                                                        <div class="dropdown-menu dropdown-menu-end">
+                                                            <a class="dropdown-item" href="#" data-toggle="modal" data-target="#transaction-details"><i class="font-size-15 mdi mdi-eye-plus-outline me-3"></i>Detailed view</a>
+                                                            <a class="dropdown-item" href="#"><i class="font-size-15 mdi mdi-printer me-3"></i>Print Receipt</a>
+                                                            <a class="dropdown-item" href="user-details.html"><i class="font-size-15 mdi mdi-calculator me-3"></i>Cashier Details</a>
+                                                            <a class="dropdown-item" href="#" data-toggle="modal" data-target="#customer-details"><i class="font-size-15 mdi mdi-account me-3"></i>Customer Details</a>
+                                                        </div>
+                                                    </div>
                                                 </td>
                                               </tr>
                                               <tr>
@@ -925,12 +1025,18 @@
                                                     <span class="fw-semibold text-uppercase">KES 610</span>
                                                 </td>
                                                 <td>
-                                                    <button data-toggle="modal" data-target="#transaction-details" class="btn btn-sm btn-info waves-effect wave-light">
-                                                        <i class="mdi mdi-eye-outline"></i> View Details
-                                                    </button>
-                                                    <button class="btn btn-sm btn-success waves-effect wave-light mx-2">
-                                                        <i class="mdi mdi-printer"></i> Print Receipt
-                                                    </button>
+                                                    <div class="dropdown">
+                                                        <a class="text-muted font-size-16" role="button" data-bs-toggle="dropdown" aria-haspopup="true">
+                                                            <i class="bx bx-dots-vertical-rounded"></i>
+                                                        </a>
+
+                                                        <div class="dropdown-menu dropdown-menu-end">
+                                                            <a class="dropdown-item" href="#" data-toggle="modal" data-target="#transaction-details"><i class="font-size-15 mdi mdi-eye-plus-outline me-3"></i>Detailed view</a>
+                                                            <a class="dropdown-item" href="#"><i class="font-size-15 mdi mdi-printer me-3"></i>Print Receipt</a>
+                                                            <a class="dropdown-item" href="user-details.html"><i class="font-size-15 mdi mdi-calculator me-3"></i>Cashier Details</a>
+                                                            <a class="dropdown-item" href="#" data-toggle="modal" data-target="#customer-details"><i class="font-size-15 mdi mdi-account me-3"></i>Customer Details</a>
+                                                        </div>
+                                                    </div>
                                                 </td>
                                               </tr>
                                               <tr>
@@ -953,12 +1059,18 @@
                                                     <span class="fw-semibold text-uppercase">KES 610</span>
                                                 </td>
                                                 <td>
-                                                    <button data-toggle="modal" data-target="#transaction-details" class="btn btn-sm btn-info waves-effect wave-light">
-                                                        <i class="mdi mdi-eye-outline"></i> View Details
-                                                    </button>
-                                                    <button class="btn btn-sm btn-success waves-effect wave-light mx-2">
-                                                        <i class="mdi mdi-printer"></i> Print Receipt
-                                                    </button>
+                                                    <div class="dropdown">
+                                                        <a class="text-muted font-size-16" role="button" data-bs-toggle="dropdown" aria-haspopup="true">
+                                                            <i class="bx bx-dots-vertical-rounded"></i>
+                                                        </a>
+
+                                                        <div class="dropdown-menu dropdown-menu-end">
+                                                            <a class="dropdown-item" href="#" data-toggle="modal" data-target="#transaction-details"><i class="font-size-15 mdi mdi-eye-plus-outline me-3"></i>Detailed view</a>
+                                                            <a class="dropdown-item" href="#"><i class="font-size-15 mdi mdi-printer me-3"></i>Print Receipt</a>
+                                                            <a class="dropdown-item" href="user-details.html"><i class="font-size-15 mdi mdi-calculator me-3"></i>Cashier Details</a>
+                                                            <a class="dropdown-item" href="#" data-toggle="modal" data-target="#customer-details"><i class="font-size-15 mdi mdi-account me-3"></i>Customer Details</a>
+                                                        </div>
+                                                    </div>
                                                 </td>
                                               </tr>
                                               <tr>
@@ -982,12 +1094,18 @@
                                                     <span class="fw-semibold text-uppercase">KES 610</span>
                                                 </td>
                                                 <td>
-                                                    <button data-toggle="modal" data-target="#transaction-details" class="btn btn-sm btn-info waves-effect wave-light">
-                                                        <i class="mdi mdi-eye-outline"></i> View Details
-                                                    </button>
-                                                    <button class="btn btn-sm btn-success waves-effect wave-light mx-2">
-                                                        <i class="mdi mdi-printer"></i> Print Receipt
-                                                    </button>
+                                                    <div class="dropdown">
+                                                        <a class="text-muted font-size-16" role="button" data-bs-toggle="dropdown" aria-haspopup="true">
+                                                            <i class="bx bx-dots-vertical-rounded"></i>
+                                                        </a>
+
+                                                        <div class="dropdown-menu dropdown-menu-end">
+                                                            <a class="dropdown-item" href="#" data-toggle="modal" data-target="#transaction-details"><i class="font-size-15 mdi mdi-eye-plus-outline me-3"></i>Detailed view</a>
+                                                            <a class="dropdown-item" href="#"><i class="font-size-15 mdi mdi-printer me-3"></i>Print Receipt</a>
+                                                            <a class="dropdown-item" href="user-details.html"><i class="font-size-15 mdi mdi-calculator me-3"></i>Cashier Details</a>
+                                                            <a class="dropdown-item" href="#" data-toggle="modal" data-target="#customer-details"><i class="font-size-15 mdi mdi-account me-3"></i>Customer Details</a>
+                                                        </div>
+                                                    </div>
                                                 </td>
                                               </tr>
                                             
@@ -1241,6 +1359,11 @@
     <script src="assets/libs/bootstrap-touchspin/jquery.bootstrap-touchspin.min.js"></script>
     <script src="assets/libs/bootstrap-maxlength/bootstrap-maxlength.min.js"></script>
     <script src="assets/libs/%40chenfengyuan/datepicker/datepicker.min.js"></script>
+
+    <!-- date range picker -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+    <!-- end of dtae range picker -->
 
     <!-- form advanced init -->
     <script src="assets/js/pages/form-advanced.init.js"></script>
