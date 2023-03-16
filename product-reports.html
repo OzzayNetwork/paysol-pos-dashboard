@@ -650,49 +650,125 @@
             </div>
             <!-- new menu category modal -->
 
-            <!-- Editing an ingredient -->
-            <div class="modal fade" id="edit-category" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <!-- Transaction Details -->
+            <div class="modal fade" id="transaction-details" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
                 <div class="modal-dialog modal-dialog-centered" role="document">
                     <div class="modal-content border-radius-0">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalCenterTitle">Edit Materisl/Ingredients</h5>
+                        <div class="modal-header d-none">
+                            <h5 class="modal-title" id="exampleModalCenterTitle">Transaction Details</h5>
                             <span class="close font-28 cursor-pointer" data-dismiss="modal" aria-label="Close">
                                  <span aria-hidden="true">&times;</span>
                             </span>
                         </div>
-                        <div class="modal-body pb-4">
-                            <div class="col-12 mb-3">
-                                <div class="form-group">
-                                    <label for="" class="text-capitalize">Material/Ingredient</label>
-                                    <input type="text" class="form-control" placeholder="The Material/Ingredient Name">
-                                </div>
+                        <div class="modal-body text-capitalize">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="badge rounded-pill badge-soft-success text-uppercase">MPESA Transaction</span>
+                                <span class="close font-28 cursor-pointer" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                               </span>
                             </div>
+                            <div class="payment-panel-parent">
+                                <div class="d-flex justify-content-between align-items-center flex-column">
+                                    <div class="flex-shrink-0 me-3 mt-4 mb-3">
+                                        <div class="avatar-md mx-auto "><span class="avatar-title rounded-circle bg-random font-size-24 ">CS</span></div>
+                                        <img class="rounded-circle avatar-sm d-none" src="assets/images/users/avatar-5.jpg" alt="Generic placeholder image" height="65">
+                                    </div>
+                                    <h4 class="mb-0 text-uppercase">Calistus Simiyu</h4>
+                                    <p class="text-muted text-uppercase mb-1">Cashier ID: 1234HYI</p>
+                                    <span class="text-uppercase badge badge-soft-info mt-4">Transaction Amount</span>
+                                    <h2 class=" text-uppercase mt-1 mb-4"><span class="">KES 450.00</span></h2>
+                                   
+                                </div>
+                                <div
+                                    class="px-4 mb-4 transactions-details-table text-left d-flex justify-items-center align-items-center w-100 px-sm-0">
+                                    <div class="d-flex flex-column boarder-grey border-1 justify-content-center align-items-center w-100  p-3">
+                                        <table class="table table-borderless mb-0 mt-0 table-sm single-receipt">
+                                            <thead class="table-border">
+                                                <tr>
+                                                    <th colspan="4" class="text-black text-uppercase pb-0 mb-0">
+                                                        <blockquote class=""><span class="text-muted">Receipt No.</span> F32GDV9GC0
+                                                        </blockquote>
+                                                    </th>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="col" colspan="2">Items</th>
+                                                    <th scope="col" class="text-center">Qty</th>
+                                                    <th class="text-right">Price</th>
+                                                    <th scope="col" class="text-right">Total</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr class="text-capitalize">
+                                                    <th scope="row">1.</th>
+                                                    <td>French Fries</td>
+                                                    <td class="text-center">3</td>
+                                                    <td class="text-right">KES&nbsp;100.00</td>
+                                                    <td class="text-right">KES&nbsp;300.00</td>
+                                                </tr>
+                                                <tr class="text-capitalize">
+                                                    <th scope="row">2.</th>
+                                                    <td>Samosa</td>
+                                                    <td class="text-center">3</td>
+                                                    <td class="text-right">KES&nbsp;50.00</td>
+                                                    <td class="text-right">KES&nbsp;150.00</td>
+                                                </tr>
+                                            </tbody>
+                                            
+                                            <tfoot class="table-borderless">
+                                                <tr class="table-bo">
+                                                    <th colspan="2" class="pt-3 text-uppercase">Total</th>
+                                                    <th class="text-center pt-3">6</th>
+                                                    <th colspan="2" class="text-right pt-3">KES&nbsp;450.00</th>
+                                                </tr>
+                                                <tr>
+                                                    <th colspan="2" class="pt-3 text-uppercase">MPESA Paid</th>
+                                                    <th class="text-center pt-3"></th>
+                                                    <th colspan="2" class="text-right pt-3">KES&nbsp;400</th>
+                                                </tr>
 
-                            <div class="col-12 mb-3">
-                                <div class="form-group">
-                                    <label for="" class="text-capitalize">Unit Of Measurement</label>
-                                    <select class="form-control selectpicker form-select text-dark" data-live-search="true" title="Select UOM" data-style="form-select btn border text-dark">
-                                        <option value="">KGs</option>
-                                        <option value="">Each</option>   
-                                        <option value="">Litres</option>                                                               
-                                    </select>
+                                                <tr>
+                                                    <th colspan="2" class="pt-3 text-uppercase">Cash Paid</th>
+                                                    <th class="text-center pt-3"></th>
+                                                    <th colspan="2" class="text-right pt-3">KES&nbsp;100</th>
+                                                </tr>
+
+                                                <tr>
+                                                    <th colspan="2" class="pt-3 text-uppercase">Change</th>
+                                                    <th class="text-center pt-3"></th>
+                                                    <th colspan="2" class="text-right pt-3">KES 50</th>
+                                                </tr>
+                                            </tfoot>
+                                        </table>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="col-12 mb-3">
-                                <div class="form-group">
-                                    <label for="" class="text-capitalize">Minimum Stock Order</label>
-                                    <input type="text" class="form-control" placeholder="Enter the Minimum stock Order">
+                                <p class="text-uppercase mt-3">MPESA Number <span class="fw-semibold">0704 549 859</span> </p>
+                                <div class="px-4 pt-3 mt-3 px-sm-0">
+                                    <div
+                                        class="border-1px-solid bg-light px-4 py-3 mb-3 d-flex align-items-center justify-content-between border-15px">
+                                        <div class="d-flex align-items-center">
+                                            <div class="d-flex align-items-center">
+                                                <div class="avatar-xs me-3"><span
+                                                        class="avatar-title rounded-circle bg-danger text-white font-size-18"><i
+                                                            class="mdi mdi-arrow-down-bold"></i></span></div>
+                                            </div>
+                                            <div class="text-left">
+                                                <h6 class="mb-0 text-capitalize">Customer <span class="fw-semibold">Alex Wanjala</span>
+                                                    <small> ( Customer Code: 12345HTGF )</small></h6>
+                                                <p class="mb-0 p-0 text-capitalize">Yesterday at 9:08 PM</p>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                         <div class="modal-footer">
-                            <button class="btn btn-primary waves-effect waves-light w-100"><i class="bx bx-check-double font-size-16 align-middle me-2"></i> Save Changes</button>
+                            <button class="btn btn-primary waves-effect waves-light w-100"><i class="mdi mdi-printer font-size-16 align-middle me-2"></i> Print Receipt</button>
                         </div>
 
                     </div>
                 </div>
             </div>
-            <!-- editing the name to a menu categor -->
+            <!-- Transaction Details -->
         <!-- end of modals -->
 
 
@@ -746,11 +822,13 @@
                                             <thead class="table-dark text-capitalize">
                                                 <tr>
                                                     <th>#</th>
-                                                    <th>Material/Ingredients</th>
-                                                    <th>Gross Amount</th>
-                                                    <th>UOM</th>
-                                                    <th class="">Last Stock Update</th>
-                                                    <th>Min. STK Order</th>
+                                                    <th>Receipt No.</th>
+                                                    <th>Client</th>
+                                                    <th>Items</th>
+                                                    <th class="">Payment Method</th>
+                                                    <th>Date</th>
+                                                    <th>Served By</th>
+                                                    <th class="text-right">Amount</th>
                                                     <th></th>
                                                     
                                                     
@@ -758,8 +836,14 @@
                                             </thead>
                                             <tfoot class="table-light">
                                                 <tr>
-                                                    <th colspan="7">5 Ingredients/Raw Materials</th>
-                                                    
+                                                    <th colspan="2">5 Receipts</th>
+                                                    <th>4 Customers</th>
+                                                    <th colspan="3">12 Products</th>
+                                                    <th>2 Cashiers</th>
+                                                    <th class="text-right text-uppercase">
+                                                        kes 67,900
+                                                    </th>
+                                                    <th></th>
                                                   </tr>
                                             </tfoot>
     
@@ -767,63 +851,146 @@
                                             <tbody class="table-sm">
                                               <tr>
                                                 <th>1.</th>
-                                                <td>Raw Chicken</td>
-                                                <td class="">45</td>
-                                                <td class="">Each</td>
-                                                <td class="">2 Jan 2023 At 11:23 AM</td>
-                                                <td class="">45</td>
                                                 <td>
-                                                    <button data-toggle="modal" data-target="#edit-category" class="btn btn-sm btn-dark waves-effect wave-light"><i class="mdi mdi-pencil"></i> Edit</button>
+                                                    <span class="fw-semibold text-uppercase">gtuy5678</span>
+                                                </td>
+                                                <td class="">ALex Wanjala</td>
+                                                <td class="">French Fries, Samosa, Manda ...</td>
+                                                <td class="">
+                                                    <span class="badge rounded-pill badge-soft-success text-uppercase">MPESA</span>
+                                                </td>
+                                                <td class="">
+                                                    Mar 16 2023 At 2:48 PM
+                                                </td>
+                                                <td>
+                                                    <a href="user-details.html">Klevin Njuguna</a>
+                                                </td>
+                                                <td class="text-right">
+                                                    <span class="fw-semibold text-uppercase">KES 610</span>
+                                                </td>
+                                                <td>
+                                                    <button data-toggle="modal" data-target="#transaction-details" class="btn btn-sm btn-info waves-effect wave-light">
+                                                        <i class="mdi mdi-eye-outline"></i> View Details
+                                                    </button>
+                                                    <button class="btn btn-sm btn-success waves-effect wave-light mx-2">
+                                                        <i class="mdi mdi-printer"></i> Print Receipt
+                                                    </button>
                                                 </td>
                                               </tr>
-
                                               <tr>
                                                 <th>2.</th>
-                                                <td>Raw Sausages</td>
-                                                <td class="">35</td>
-                                                <td class="">Each</td>
-                                                <td class="">2 Jan 2023 At 11:23 AM</td>
-                                                <td class="">105</td>
                                                 <td>
-                                                    <button data-toggle="modal" data-target="#edit-category" class="btn btn-sm btn-dark waves-effect wave-light"><i class="mdi mdi-pencil"></i> Edit</button>
+                                                    <span class="fw-semibold text-uppercase">gtuy5678</span>
+                                                </td>
+                                                <td class="">ALex Wanjala</td>
+                                                <td class="">French Fries, Samosa, Manda ...</td>
+                                                <td class="">
+                                                    <span class="badge rounded-pill badge-soft-success text-uppercase">MPESA</span>
+                                                </td>
+                                                <td class="">
+                                                    Mar 16 2023 At 2:48 PM
+                                                </td>
+                                                <td>
+                                                    <a href="user-details.html">Klevin Njuguna</a>
+                                                </td>
+                                                <td class="text-right">
+                                                    <span class="fw-semibold text-uppercase">KES 610</span>
+                                                </td>
+                                                <td>
+                                                    <button data-toggle="modal" data-target="#transaction-details" class="btn btn-sm btn-info waves-effect wave-light">
+                                                        <i class="mdi mdi-eye-outline"></i> View Details
+                                                    </button>
+                                                    <button class="btn btn-sm btn-success waves-effect wave-light mx-2">
+                                                        <i class="mdi mdi-printer"></i> Print Receipt
+                                                    </button>
                                                 </td>
                                               </tr>
-
                                               <tr>
                                                 <th>3.</th>
-                                                <td>Minced Meat</td>
-                                                <td class="">5</td>
-                                                <td class="">KGs</td>
-                                                <td class="">2 Jan 2023 At 11:23 AM</td>
-                                                <td class="">3</td>
                                                 <td>
-                                                    <button data-toggle="modal" data-target="#edit-category" class="btn btn-sm btn-dark waves-effect wave-light"><i class="mdi mdi-pencil"></i> Edit</button>
+                                                    <span class="fw-semibold text-uppercase">gtuy5678</span>
+                                                </td>
+                                                <td class="">ALex Wanjala</td>
+                                                <td class="">French Fries, Samosa, Manda ...</td>
+                                                <td class="">
+                                                    <span class="badge rounded-pill badge-soft-success text-uppercase">MPESA</span>
+                                                </td>
+                                                <td class="">
+                                                    Mar 16 2023 At 2:48 PM
+                                                </td>
+                                                <td>
+                                                    <a href="user-details.html">Klevin Njuguna</a>
+                                                </td>
+                                                <td class="text-right">
+                                                    <span class="fw-semibold text-uppercase">KES 610</span>
+                                                </td>
+                                                <td>
+                                                    <button data-toggle="modal" data-target="#transaction-details" class="btn btn-sm btn-info waves-effect wave-light">
+                                                        <i class="mdi mdi-eye-outline"></i> View Details
+                                                    </button>
+                                                    <button class="btn btn-sm btn-success waves-effect wave-light mx-2">
+                                                        <i class="mdi mdi-printer"></i> Print Receipt
+                                                    </button>
                                                 </td>
                                               </tr>
-
                                               <tr>
                                                 <th>4.</th>
-                                                <td>Raw Beef</td>
-                                                <td class="">5</td>
-                                                <td class="">KGs</td>
-                                                <td class="">2 Jan 2023 At 11:23 AM</td>
-                                                <td class="">3</td>
                                                 <td>
-                                                    <button data-toggle="modal" data-target="#edit-category" class="btn btn-sm btn-dark waves-effect wave-light"><i class="mdi mdi-pencil"></i> Edit</button>
+                                                    <span class="fw-semibold text-uppercase">gtuy5678</span>
+                                                </td>
+                                                <td class="">ALex Wanjala</td>
+                                                <td class="">French Fries, Samosa, Manda ...</td>
+                                                <td class="">
+                                                    <span class="badge rounded-pill badge-soft-success text-uppercase">MPESA</span>
+                                                </td>
+                                                <td class="">
+                                                    Mar 16 2023 At 2:48 PM
+                                                </td>
+                                                <td>
+                                                    <a href="user-details.html">Klevin Njuguna</a>
+                                                </td>
+                                                <td class="text-right">
+                                                    <span class="fw-semibold text-uppercase">KES 610</span>
+                                                </td>
+                                                <td>
+                                                    <button data-toggle="modal" data-target="#transaction-details" class="btn btn-sm btn-info waves-effect wave-light">
+                                                        <i class="mdi mdi-eye-outline"></i> View Details
+                                                    </button>
+                                                    <button class="btn btn-sm btn-success waves-effect wave-light mx-2">
+                                                        <i class="mdi mdi-printer"></i> Print Receipt
+                                                    </button>
                                                 </td>
                                               </tr>
-
                                               <tr>
                                                 <th>5.</th>
-                                                <td>Rice</td>
-                                                <td class="">10</td>
-                                                <td class="">KGs</td>
-                                                <td class="">2 Jan 2023 At 11:23 AM</td>
-                                                <td class="">3</td>
                                                 <td>
-                                                    <button data-toggle="modal" data-target="#edit-category" class="btn btn-sm btn-dark waves-effect wave-light"><i class="mdi mdi-pencil"></i> Edit</button>
+                                                    <span class="fw-semibold text-uppercase">gtuy5678</span>
+                                                </td>
+                                                <td class="">ALex Wanjala</td>
+                                                <td class="">French Fries, Samosa, Manda ...</td>
+                                                <td class="">
+                                                    <span class="badge rounded-pill badge-soft-success text-uppercase">MPESA</span>
+                                                    <span class="badge rounded-pill badge-soft-dark text-uppercase">cash</span>
+                                                </td>
+                                                <td class="">
+                                                    Mar 16 2023 At 2:48 PM
+                                                </td>
+                                                <td>
+                                                    <a href="user-details.html">Klevin Njuguna</a>
+                                                </td>
+                                                <td class="text-right">
+                                                    <span class="fw-semibold text-uppercase">KES 610</span>
+                                                </td>
+                                                <td>
+                                                    <button data-toggle="modal" data-target="#transaction-details" class="btn btn-sm btn-info waves-effect wave-light">
+                                                        <i class="mdi mdi-eye-outline"></i> View Details
+                                                    </button>
+                                                    <button class="btn btn-sm btn-success waves-effect wave-light mx-2">
+                                                        <i class="mdi mdi-printer"></i> Print Receipt
+                                                    </button>
                                                 </td>
                                               </tr>
+                                            
                                             </tbody>
                                         </table>
                                     </div>
