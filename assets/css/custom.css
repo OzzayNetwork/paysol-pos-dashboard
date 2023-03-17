@@ -1270,4 +1270,8 @@
             .selected-contacts .table>:not(caption)>*>* {
                 padding: 0.5rem .5rem;
             }
+            .mail-list a.active {
+                color: #2fb895;
+                font-weight: 500;
+            }
             
