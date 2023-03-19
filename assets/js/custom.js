@@ -87,6 +87,12 @@ $(document).ready(function(){
         $(".fullscreen").children('i').removeClass("bx-exit-fullscreen")
         $(".fullscreen").children('i').addClass("bx-fullscreen")
     });
+
+    $(".clone-contacts").on('click', function(){
+        // alert("clone clicked")
+        var itemtoclone=$('.contact-cont row')
+        $(itemtoclone).eq(0).clone(true).appendTo(".contact-cont")
+    })
 })
 $(document).ready(function(){
     // date range picker
