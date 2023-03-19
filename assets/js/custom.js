@@ -123,11 +123,11 @@ $(document).ready(function(){
     });
     // date range picker
 })
+$(document).ready(function(){
+    $(document).ready(function() {
 
-$(document).ready(function() {
+        $('.selectpicker').selectpicker();
+        $('.selectpicker').selectpicker('render')
+    });
+})
 
-    
-
-    $('.selectpicker').selectpicker();
-    $('.selectpicker').selectpicker('render')
-});

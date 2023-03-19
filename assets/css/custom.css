@@ -1274,4 +1274,7 @@
                 color: #2fb895;
                 font-weight: 500;
             }
+            .highcharts-credits{
+                display: none;
+            }
             
