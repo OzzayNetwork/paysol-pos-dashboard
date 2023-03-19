@@ -595,7 +595,7 @@
                                                 <div class="row">
                                                     <div class="col-12">
                                                         <div class="mb-3">
-                                                            <label for="formrow-firstname-input" class="form-label">First Day Of The week <span class="text-danger">*</span></label>
+                                                            <label for="formrow-firstname-input text-black text-capitalize" class="form-label">First Day Of The week <span class="text-danger">*</span></label>
                                                             <p>This will help with displaying weekly collections.</p>
                                                         </div>
                                                     </div>
@@ -621,8 +621,85 @@
 
                                                     <div class="col-12">
                                                         <div class="mb-3">
-                                                            <label for="formrow-firstname-input" class="form-label">SMS Sales Reports <span class="text-danger">*</span></label>
-                                                            <p>How would you like to receive reports for sales. This will be sent to both specified emails and phone numbers in form of SMS</p>
+                                                            <label for="formrow-firstname-input" class="form-label text-black text-capitalize">SMS Sales Reports <span class="text-danger">*</span></label>
+                                                            <p>In what duration of periods would you like to be receiving sales reports. This will be sent to both specified emails and phone numbers in form of SMS</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-12 mb-2">
+                                                        <div class="form-check form-check-info mb-0">
+                                                            <input class="form-check-input" type="checkbox" id="monthly-sales" checked>
+                                                            <label class="form-check-label" for="monthly-sales">
+                                                                Monthly Sales Reports
+                                                            </label>
+                                                            <div class="row">
+                                                                <div class="col-sm-12 col-md-6">
+                                                                    <label for="monthly-sales"><p class="text-black-50">You will be charged <strong class="text-black fw-semibold">KES 325.00</strong> Per Contact that receives the notification per month</p></label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-12 mb-2">
+                                                        <div class="form-check form-check-info mb-0">
+                                                            <input class="form-check-input" type="checkbox" id="weekly-sales">
+                                                            <label class="form-check-label" for="weekly-sales">
+                                                                Weekly Sales Reports
+                                                            </label>
+                                                            <div class="row">
+                                                                <div class="col-sm-12 col-md-6">
+                                                                    <label for="weekly-sales"><p class="text-black-50">You will be charged <strong class="text-black fw-semibold">KES 525.00</strong> Per Contact that receives the notification per month</p></label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-12 mb-2">
+                                                        <div class="form-check form-check-info mb-0">
+                                                            <input class="form-check-input" type="checkbox" id="daily-sales">
+                                                            <label class="form-check-label" for="daily-sales">
+                                                                Daily Sales Reports
+                                                            </label>
+                                                            <div class="row">
+                                                                <div class="col-sm-12 col-md-6">
+                                                                    <label for="daily-sales"><p class="text-black-50">You will be charged <strong class="text-black fw-semibold">KES 1,000.00</strong> Per Contact that receives the notification per month</p></label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-12 mt-2 p-4 bg-warning bg-opacity-10">
+                                                        <div class="mb-3">
+                                                            <label for="formrow-firstname-input" class="form-label text-capitalize text-black">Contacts to receive SMS Sales Reports<span class="text-danger">*</span></label>
+                                                            <p>The contacts you enlist below will be receiving the sales reports in the frequency you select up above.</p>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col-12 contact-cont">
+                                                                <div class="row">
+                                                                    <div class="col-sm-12 col-md-6 mb-3">
+                                                                        <div class="form-group">
+                                                                            <label for="">Recipients Name</label>
+                                                                            <input type="text" placeholder="Full Name" class="form-control" spellcheck="false" data-ms-editor="true">
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-sm-12 col-md-3 mb-3">
+                                                                        <div class="form-group">
+                                                                            <label for="">Email Address</label>
+                                                                            <input type="email" placeholder="email@email.com" class="form-control" spellcheck="false" data-ms-editor="true">
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-sm-12 col-md-3 mb-3">
+                                                                        <div class="form-group">
+                                                                            <label for="">Phone Number</label>
+                                                                            <input type="text" placeholder="Enter Phone No." class="form-control" spellcheck="false" data-ms-editor="true">
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <button class="btn btn-outline-primary waves-effect waves-light w-100" type="submit ">
+                                                                    <i class="bx bx-plus me-1"></i> Add Another Contact
+                                                                </button>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                     
