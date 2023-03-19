@@ -50,7 +50,7 @@ Highcharts.chart('heatMap', {
         min: 0,
         minColor: '#FFFFFF',
         maxColor: Highcharts.getOptions().colors[0],
-        visible:false,
+        visible:true,
         stops: [
                 [0, '#ebedf0'],
                 [0.2, '#c6e6d0'],
@@ -73,10 +73,19 @@ Highcharts.chart('heatMap', {
     legend: {
         align: 'right',
         layout: 'vertical',
-        margin: 0,
+        margin: 20,
         verticalAlign: 'top',
         y: 25,
         symbolHeight: 280
+    },
+
+    legend: {
+        align: 'right',
+        layout: 'vertical',
+        margin: 10,
+        verticalAlign: 'bottom',
+        symbolHeight: 280,
+        y: 10,
     },
 
     tooltip: {
