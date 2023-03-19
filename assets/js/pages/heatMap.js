@@ -11,7 +11,10 @@ Highcharts.chart('heatMap', {
         type: 'heatmap',
         marginTop: 80,
         marginBottom: 0,
-        plotBorderWidth: 0
+        plotBorderWidth: 0,
+        style: {
+            fontFamily: '"Poppins",sans-serif'
+        }
     },
 
 
@@ -55,7 +58,16 @@ Highcharts.chart('heatMap', {
                 [0.6, '#46af68'],
                 [0.7, '#358e52'],
                 [1, '#215d34']
-            ] 
+            ] ,
+
+        // stops: [
+        //     [0, '#ebedf0'],
+        //     [0.2, '#aae5d3'],
+        //     [0.4, '#00c399'],
+        //     [0.6, '#00a571'],
+        //     [0.7, '#008755'],
+        //     [1, '#00592c']
+        // ] 
     },
 
     legend: {
