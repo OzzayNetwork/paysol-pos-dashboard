@@ -135,7 +135,6 @@ $(document).ready(function(){
 })
 $(document).ready(function(){
     $(document).ready(function() {
-
         $('.selectpicker').selectpicker();
         $('.selectpicker').selectpicker('render')
     });

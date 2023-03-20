@@ -84,7 +84,7 @@
 
                                     <div class="form-group mb-3">
                                         <label for="">Contact Group</label>
-                                        <select class="form-control selectpicker form-select text-black" data-live-search="true" title="Select UOM" data-style="form-select btn border text-black">
+                                        <select class="form-control selectpicker form-select text-black" data-live-search="true" title="Select Contact Group" data-style="form-select btn border text-black">
                                             <option value="" selected>None</option>
                                             <option value="">Customers</option>   
                                             <option value="">Suppliers</option> 
@@ -669,7 +669,7 @@
                                                 <i class="mdi mdi-account-plus-outline  font-size-16"></i> <span class="pl-1 d-md-inline">Add A Contact</span>
                                             </button>
 
-                                            <button data-bs-toggle="modal" data-bs-target="#add-contact" type="button" class="btn btn-primary dropdown-toggle option-selector">
+                                            <button data-bs-toggle="modal" data-bs-target="#new-contact-group" type="button" class="btn btn-primary dropdown-toggle option-selector">
                                                 <i class="mdi mdi-account-multiple-plus-outline  font-size-16"></i> <span class="pl-1 d-md-inline">Add A Contact Group</span>
                                             </button>
                                         </div>
@@ -749,10 +749,11 @@
                                                         </a>
 
                                                         <div class="dropdown-menu dropdown-menu-end">
-                                                            <a class="dropdown-item" href="#"><i class="font-size-15 mdi mdi-eye-plus-outline me-3"></i>View Message Insights</a>
-                                                            <a class="dropdown-item" href="#"><i class="font-size-15 mdi mdi-tag-remove me-3"></i>Add Tag</a>
-                                                            <a class="dropdown-item" href="#"><i class="font-size-15 mdi mdi-account-edit me-3"></i>Edit</a>
-                                                            <a class="dropdown-item" href="#"><i class="font-size-15 mdi mdi-chat-plus me-3"></i>Compose Message</a>
+                                                            <a class="dropdown-item d-none"  href="#"><i class="font-size-15 mdi mdi-eye-plus-outline me-3"></i>View Message Insights</a>
+                                                            <a class="dropdown-item d-none" href="#"><i class="font-size-15 mdi mdi-tag-remove me-3 "></i>Add Tag</a>
+                                                            <a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#edit-contact" href="#"><i class="font-size-15 mdi mdi-account-edit me-3"></i>Edit</a>
+                                                            <a class="dropdown-item write-msg-btn" href="#"><i class="font-size-15 mdi mdi-chat-plus me-3"></i>Write Message</a>
+                                                            <a class="dropdown-item " data-bs-toggle="modal" data-bs-target="#add-contact-group" href="#"><i class="font-size-15 dripicons-reply-all flip-x me-3"></i>Move to Contact Group</a>
                                                             <a class="dropdown-item" href="#"><i class="font-size-15 dripicons-trash me-3"></i>Delete</a>
                                                         </div>
                                                     </div>
@@ -855,11 +856,12 @@
                                                             <i class="bx bx-dots-vertical-rounded"></i>
                                                         </a>
 
-                                                        <div class="dropdown-menu dropdown-menu-end">
-                                                            <a class="dropdown-item" href="#"><i class="font-size-15 mdi mdi-eye-plus-outline me-3"></i>View Message Insights</a>
-                                                            <a class="dropdown-item" href="#"><i class="font-size-15 mdi mdi-tag-remove me-3"></i>Add Tag</a>
-                                                            <a class="dropdown-item" href="#"><i class="font-size-15 mdi mdi-account-edit me-3"></i>Edit</a>
-                                                            <a class="dropdown-item" href="#"><i class="font-size-15 mdi mdi-chat-plus me-3"></i>Compose Message</a>
+                                                       <div class="dropdown-menu dropdown-menu-end">
+                                                            <a class="dropdown-item d-none"  href="#"><i class="font-size-15 mdi mdi-eye-plus-outline me-3"></i>View Message Insights</a>
+                                                            <a class="dropdown-item d-none" href="#"><i class="font-size-15 mdi mdi-tag-remove me-3 "></i>Add Tag</a>
+                                                            <a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#edit-contact" href="#"><i class="font-size-15 mdi mdi-account-edit me-3"></i>Edit</a>
+                                                            <a class="dropdown-item write-msg-btn" href="#"><i class="font-size-15 mdi mdi-chat-plus me-3"></i>Write Message</a>
+                                                            <a class="dropdown-item " data-bs-toggle="modal" data-bs-target="#add-contact-group" href="#"><i class="font-size-15 dripicons-reply-all flip-x me-3"></i>Move to Contact Group</a>
                                                             <a class="dropdown-item" href="#"><i class="font-size-15 dripicons-trash me-3"></i>Delete</a>
                                                         </div>
                                                     </div>
@@ -910,11 +912,12 @@
                                                             <i class="bx bx-dots-vertical-rounded"></i>
                                                         </a>
 
-                                                        <div class="dropdown-menu dropdown-menu-end">
-                                                            <a class="dropdown-item" href="#"><i class="font-size-15 mdi mdi-eye-plus-outline me-3"></i>View Message Insights</a>
-                                                            <a class="dropdown-item" href="#"><i class="font-size-15 mdi mdi-tag-remove me-3"></i>Add Tag</a>
-                                                            <a class="dropdown-item" href="#"><i class="font-size-15 mdi mdi-account-edit me-3"></i>Edit</a>
-                                                            <a class="dropdown-item" href="#"><i class="font-size-15 mdi mdi-chat-plus me-3"></i>Compose Message</a>
+                                                       <div class="dropdown-menu dropdown-menu-end">
+                                                            <a class="dropdown-item d-none"  href="#"><i class="font-size-15 mdi mdi-eye-plus-outline me-3"></i>View Message Insights</a>
+                                                            <a class="dropdown-item d-none" href="#"><i class="font-size-15 mdi mdi-tag-remove me-3 "></i>Add Tag</a>
+                                                            <a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#edit-contact" href="#"><i class="font-size-15 mdi mdi-account-edit me-3"></i>Edit</a>
+                                                            <a class="dropdown-item write-msg-btn" href="#"><i class="font-size-15 mdi mdi-chat-plus me-3"></i>Write Message</a>
+                                                            <a class="dropdown-item " data-bs-toggle="modal" data-bs-target="#add-contact-group" href="#"><i class="font-size-15 dripicons-reply-all flip-x me-3"></i>Move to Contact Group</a>
                                                             <a class="dropdown-item" href="#"><i class="font-size-15 dripicons-trash me-3"></i>Delete</a>
                                                         </div>
                                                     </div>
@@ -963,11 +966,12 @@
                                                             <i class="bx bx-dots-vertical-rounded"></i>
                                                         </a>
 
-                                                        <div class="dropdown-menu dropdown-menu-end">
-                                                            <a class="dropdown-item" href="#"><i class="font-size-15 mdi mdi-eye-plus-outline me-3"></i>View Message Insights</a>
-                                                            <a class="dropdown-item" href="#"><i class="font-size-15 mdi mdi-tag-remove me-3"></i>Add Tag</a>
-                                                            <a class="dropdown-item" href="#"><i class="font-size-15 mdi mdi-account-edit me-3"></i>Edit</a>
-                                                            <a class="dropdown-item" href="#"><i class="font-size-15 mdi mdi-chat-plus me-3"></i>Compose Message</a>
+                                                       <div class="dropdown-menu dropdown-menu-end">
+                                                            <a class="dropdown-item d-none"  href="#"><i class="font-size-15 mdi mdi-eye-plus-outline me-3"></i>View Message Insights</a>
+                                                            <a class="dropdown-item d-none" href="#"><i class="font-size-15 mdi mdi-tag-remove me-3 "></i>Add Tag</a>
+                                                            <a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#edit-contact" href="#"><i class="font-size-15 mdi mdi-account-edit me-3"></i>Edit</a>
+                                                            <a class="dropdown-item write-msg-btn" href="#"><i class="font-size-15 mdi mdi-chat-plus me-3"></i>Write Message</a>
+                                                            <a class="dropdown-item " data-bs-toggle="modal" data-bs-target="#add-contact-group" href="#"><i class="font-size-15 dripicons-reply-all flip-x me-3"></i>Move to Contact Group</a>
                                                             <a class="dropdown-item" href="#"><i class="font-size-15 dripicons-trash me-3"></i>Delete</a>
                                                         </div>
                                                     </div>
@@ -1016,11 +1020,12 @@
                                                             <i class="bx bx-dots-vertical-rounded"></i>
                                                         </a>
 
-                                                        <div class="dropdown-menu dropdown-menu-end">
-                                                            <a class="dropdown-item" href="#"><i class="font-size-15 mdi mdi-eye-plus-outline me-3"></i>View Message Insights</a>
-                                                            <a class="dropdown-item" href="#"><i class="font-size-15 mdi mdi-tag-remove me-3"></i>Add Tag</a>
-                                                            <a class="dropdown-item" href="#"><i class="font-size-15 mdi mdi-account-edit me-3"></i>Edit</a>
-                                                            <a class="dropdown-item" href="#"><i class="font-size-15 mdi mdi-chat-plus me-3"></i>Compose Message</a>
+                                                       <div class="dropdown-menu dropdown-menu-end">
+                                                            <a class="dropdown-item d-none"  href="#"><i class="font-size-15 mdi mdi-eye-plus-outline me-3"></i>View Message Insights</a>
+                                                            <a class="dropdown-item d-none" href="#"><i class="font-size-15 mdi mdi-tag-remove me-3 "></i>Add Tag</a>
+                                                            <a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#edit-contact" href="#"><i class="font-size-15 mdi mdi-account-edit me-3"></i>Edit</a>
+                                                            <a class="dropdown-item write-msg-btn" href="#"><i class="font-size-15 mdi mdi-chat-plus me-3"></i>Write Message</a>
+                                                            <a class="dropdown-item " data-bs-toggle="modal" data-bs-target="#add-contact-group" href="#"><i class="font-size-15 dripicons-reply-all flip-x me-3"></i>Move to Contact Group</a>
                                                             <a class="dropdown-item" href="#"><i class="font-size-15 dripicons-trash me-3"></i>Delete</a>
                                                         </div>
                                                     </div>
@@ -1071,11 +1076,12 @@
                                                             <i class="bx bx-dots-vertical-rounded"></i>
                                                         </a>
 
-                                                        <div class="dropdown-menu dropdown-menu-end">
-                                                            <a class="dropdown-item" href="#"><i class="font-size-15 mdi mdi-eye-plus-outline me-3"></i>View Message Insights</a>
-                                                            <a class="dropdown-item" href="#"><i class="font-size-15 mdi mdi-tag-remove me-3"></i>Add Tag</a>
-                                                            <a class="dropdown-item" href="#"><i class="font-size-15 mdi mdi-account-edit me-3"></i>Edit</a>
-                                                            <a class="dropdown-item" href="#"><i class="font-size-15 mdi mdi-chat-plus me-3"></i>Compose Message</a>
+                                                       <div class="dropdown-menu dropdown-menu-end">
+                                                            <a class="dropdown-item d-none"  href="#"><i class="font-size-15 mdi mdi-eye-plus-outline me-3"></i>View Message Insights</a>
+                                                            <a class="dropdown-item d-none" href="#"><i class="font-size-15 mdi mdi-tag-remove me-3 "></i>Add Tag</a>
+                                                            <a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#edit-contact" href="#"><i class="font-size-15 mdi mdi-account-edit me-3"></i>Edit</a>
+                                                            <a class="dropdown-item write-msg-btn" href="#"><i class="font-size-15 mdi mdi-chat-plus me-3"></i>Write Message</a>
+                                                            <a class="dropdown-item " data-bs-toggle="modal" data-bs-target="#add-contact-group" href="#"><i class="font-size-15 dripicons-reply-all flip-x me-3"></i>Move to Contact Group</a>
                                                             <a class="dropdown-item" href="#"><i class="font-size-15 dripicons-trash me-3"></i>Delete</a>
                                                         </div>
                                                     </div>
@@ -1166,8 +1172,8 @@
                                     </p>
 
                                     <div class="form-group mb-4">
-                                        <label for="">Contacts title</label>
-                                        <input type="text" class="form-control" placeholder="Enter The Tittle for the contacts you are to upload">
+                                        <label for="">Contacts Group Name</label>
+                                        <input type="text" class="form-control" placeholder="Contact Group Title">
                                     </div>
                                     <div class="p-4 bg-light">
                                         <div class="row ">
@@ -1203,11 +1209,11 @@
             <!-- upload contacts modal -->
 
             <!-- adding a new contact -->
-           <div class="modal fade add-contact" data-bs-backdrop="static" data-bs-keyboard="false" id="add-contact" tabindex="-1" role="dialog" aria-labelledby="composemodalTitle" aria-hidden="true">
+           <div class="modal fade add-contact" data-bs-backdrop="static" data-bs-keyboard="false" id="edit-contact" tabindex="-1" role="dialog" aria-labelledby="composemodalTitle" aria-hidden="true">
                 <div class="modal-dialog modal-dialog-centered" role="document">
                     <div class="modal-content">
                         <div class="modal-header bg-primary text-white">
-                            <h5 class="modal-title text-white" id="composemodalTitle">Add New Contact</h5>
+                            <h5 class="modal-title text-white" id="composemodalTitle">Edit Contact</h5>
                             <button type="button" class="btn-close text-white" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
@@ -1215,26 +1221,33 @@
                                 <div class="mb-5">
                                     <div class="form-group mb-3">
                                         <label for="">Contact Name(s)</label>
-                                        <input type="text" class="form-control" placeholder="Enter The Tittle for the contacts you are to upload">
+                                        <div class="row">
+                                            <div class="col-6">
+                                                <input type="text" class="form-control" placeholder="First Name" value="Simiren">
+                                            </div>
+                                            <div class="col-6">
+                                                <input type="text" class="form-control" placeholder="Second Name" value="Nkere">
+                                            </div>
+                                        </div>
                                     </div>
 
                                     <div class="form-group mb-3">
                                         <label for="">Phone Number</label>
-                                        <input type="text" class="form-control" placeholder="Enter the phone number">
+                                        <input type="text" class="form-control" placeholder="Enter the phone number" value="07012345678">
                                     </div>
                                     <div class="form-group mb-3">
                                         <label for="">Email address</label>
-                                        <input type="email" class="form-control" placeholder="Enter the email address">
+                                        <input type="email" class="form-control" placeholder="Enter the email address" value="simi@email.com">
                                     </div>
 
                                    
 
                                     <div class="form-group mb-3">
                                         <label for="">Contact Group</label>
-                                        <select class="form-control selectpicker form-select text-black" data-live-search="true" title="Select UOM" data-style="form-select btn border text-black">
-                                            <option value="" selected>None</option>
+                                        <select class="form-control selectpicker form-select text-black" data-live-search="true" title="Select Contact Group" data-style="form-select btn border text-black">
+                                            <option value="">None</option>
                                             <option value="">Customers</option>   
-                                            <option value="">Suppliers</option> 
+                                            <option value="" selected>Suppliers</option> 
                                             <option value="">Directors</option> 
                                             <option value="">Staff Members</option>                                                               
                                         </select>
@@ -1251,7 +1264,100 @@
                     </div>
                 </div>
             </div>
+
+            <!-- moving a contact to a contact group -->
+            <div class="modal fade" id="add-contact-group" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content border-radius-0">
+                        <div class="modal-header d-none">
+                            <h5 class="modal-title" id="exampleModalCenterTitle">Move To Contact Group</h5>
+                            <span class="close font-28 cursor-pointer" data-dismiss="modal" aria-label="Close">
+                                 <span aria-hidden="true">&times;</span>
+                            </span>
+                        </div>
+                        <div class="modal-body pt-4">
+                            <div class="text-center mb-1">
+                                <div class="avatar-md mx-auto mb-4">
+                                    <div class="avatar-title bg-light rounded-circle text-primary h1">
+                                        <i class="dripicons-reply-all"></i>
+                                    </div>
+                                </div>
+
+                                <div class="row justify-content-center">
+                                    <div class="col-12">
+                                        <h4 class="text-primary text-capitalize text-black">Add To contact Group</h4>
+                                        <p class="text-muted font-size-14 mb-4">Move <strong class="text-black fw-semibold">Alex Wanjala's </strong>Contact info to a group.</p>
+                                    </div>
+                                   <div class="col-12">
+                                        <div class="form-group mb-3">
+                                            <select class="form-control selectpicker form-select text-black" data-live-search="true" title="Select Contact Group" data-style="form-select btn border">
+                                                <option value="">Customers</option>   
+                                                <option value="">Suppliers</option> 
+                                                <option value="">Directors</option> 
+                                                <option value="">Staff Members</option>                                                               
+                                            </select>
+                                        </div>
+                                   </div>
+
+                                   <div class="col-12">
+                                        <button type="button" class="btn btn-primary dropdown-toggle option-selector w-100 mt-3">
+                                            <i class="mdi mdi-account-plus-outline  font-size-16"></i> <span class="pl-1 d-md-inline">Save Changes</span>
+                                        </button>
+                                   </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- moving a contact to a contact group -->
+
+
             <!-- adding a new contact -->
+
+            <div class="modal fade" id="new-contact-group" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content border-radius-0">
+                        <div class="modal-header d-none">
+                            <h5 class="modal-title" id="exampleModalCenterTitle">New Contact Group</h5>
+                            <span class="close font-28 cursor-pointer" data-dismiss="modal" aria-label="Close">
+                                 <span aria-hidden="true">&times;</span>
+                            </span>
+                        </div>
+                        <div class="modal-body pt-4">
+                            <div class="text-center mb-4">
+                                <div class="avatar-md mx-auto mb-4">
+                                    <div class="avatar-title bg-light rounded-circle text-primary h1">
+                                        <i class="mdi mdi-account-multiple-plus-outline"></i>
+                                    </div>
+                                </div>
+
+                                <div class="row justify-content-center">
+                                    <div class="col-xl-10">
+                                        <h4 class="text-primary">Add New Contact Group</h4>
+                                        <p class="text-muted font-size-14 mb-4">Write Down the Name to The new Conact Group Below</p>
+
+                                        <div class="input-group bg-light rounded">
+                                            <input type="email" class="form-control bg-transparent border-0" placeholder="Contact Group" aria-label="Recipient's username" aria-describedby="button-addon2">
+                                            
+                                            <button class="btn btn-primary" type="button" id="button-addon2" data-dismiss="modal" aria-label="Close">
+                                                <i class="bx bx-plus"></i> Add
+                                            </button>
+                                            
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
 
 
 
@@ -1283,42 +1389,54 @@
     <div class="rightbar-overlay"></div>
 
     <!-- JAVASCRIPT -->
-    <script src="assets/libs/jquery/jquery.min.js"></script>
-    <script src="assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/libs/metismenu/metisMenu.min.js"></script>
-    <script src="assets/libs/simplebar/simplebar.min.js"></script>
-    <script src="assets/libs/node-waves/waves.min.js"></script>
+    <script src="assets/libs/jquery/jquery.min.js "></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js " integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49 " crossorigin="anonymous "></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js " integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy " crossorigin="anonymous "></script>
+
+    <script src="assets/libs/bootstrap/js/bootstrap.bundle.min.js "></script>
+    <script src="assets/libs/metismenu/metisMenu.min.js "></script>
+    <script src="assets/libs/simplebar/simplebar.min.js "></script>
+    <script src="assets/libs/node-waves/waves.min.js "></script>
 
 
     <!-- Required datatable js -->
-    <script src="assets/libs/datatables.net/js/jquery.dataTables.min.js"></script>
-    <script src="assets/libs/datatables.net-bs4/js/dataTables.bootstrap4.min.js"></script>
+    <script src="assets/libs/datatables.net/js/jquery.dataTables.min.js "></script>
+    <script src="assets/libs/datatables.net-bs4/js/dataTables.bootstrap4.min.js "></script>
     <!-- Buttons examples -->
-    <script src="assets/libs/datatables.net-buttons/js/dataTables.buttons.min.js"></script>
-    <script src="assets/libs/datatables.net-buttons-bs4/js/buttons.bootstrap4.min.js"></script>
-    <script src="assets/libs/jszip/jszip.min.js"></script>
-    <script src="assets/libs/pdfmake/build/pdfmake.min.js"></script>
-    <script src="assets/libs/pdfmake/build/vfs_fonts.js"></script>
-    <script src="assets/libs/datatables.net-buttons/js/buttons.html5.min.js"></script>
-    <script src="assets/libs/datatables.net-buttons/js/buttons.print.min.js"></script>
-    <script src="assets/libs/datatables.net-buttons/js/buttons.colVis.min.js"></script>
-    <!-- numerals number formater -->
-    <script src="assets/libs/numeral/numeral.js "></script>
+    <script src="assets/libs/datatables.net-buttons/js/dataTables.buttons.min.js "></script>
+    <script src="assets/libs/datatables.net-buttons-bs4/js/buttons.bootstrap4.min.js "></script>
+    <script src="assets/libs/jszip/jszip.min.js "></script>
+    <script src="assets/libs/pdfmake/build/pdfmake.min.js "></script>
+    <script src="assets/libs/pdfmake/build/vfs_fonts.js "></script>
+    <script src="assets/libs/datatables.net-buttons/js/buttons.html5.min.js "></script>
+    <script src="assets/libs/datatables.net-buttons/js/buttons.print.min.js "></script>
+    <script src="assets/libs/datatables.net-buttons/js/buttons.colVis.min.js "></script>
+    <!-- Bootstrap select -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/js/bootstrap-select.min.js "></script>
+
+    <script src="assets/libs/select2/js/select2.min.js"></script>
+    <script src="assets/libs/bootstrap-datepicker/js/bootstrap-datepicker.min.js"></script>
+    <script src="assets/libs/spectrum-colorpicker2/spectrum.min.js"></script>
+    <script src="assets/libs/bootstrap-timepicker/js/bootstrap-timepicker.min.js"></script>
+    <script src="assets/libs/bootstrap-touchspin/jquery.bootstrap-touchspin.min.js"></script>
+    <script src="assets/libs/bootstrap-maxlength/bootstrap-maxlength.min.js"></script>
+    <script src="assets/libs/%40chenfengyuan/datepicker/datepicker.min.js"></script>
+
+    <!-- form advanced init -->
+    <script src="assets/js/pages/form-advanced.init.js"></script>
+
 
     <!-- Responsive examples -->
-    <script src="assets/libs/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
-    <script src="assets/libs/datatables.net-responsive-bs4/js/responsive.bootstrap4.min.js"></script>
-
-    <!-- Bootstrap select -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/js/bootstrap-select.min.js"></script>
-    <!-- Plugins js -->
-    <script src="assets/libs/dropzone/min/dropzone.min.js"></script>
+    <script src="assets/libs/datatables.net-responsive/js/dataTables.responsive.min.js "></script>
+    <script src="assets/libs/datatables.net-responsive-bs4/js/responsive.bootstrap4.min.js "></script>
+    <!-- numerals number formater -->
+    <script src="assets/libs/numeral/numeral.js "></script>
     <!-- Datatable init js -->
-    <script src="assets/js/pages/datatables.init.js"></script>
+    <script src="assets/js/pages/datatables.init.js "></script>
 
     <!-- App js -->
-    <script src="assets/js/app.js"></script>
-    <script src="assets/js/custom.js"></script>
+    <script src="assets/js/app.js "></script>
+    <script src="assets/js/custom.js "></script>
 </body>
 
 
