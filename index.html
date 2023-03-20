@@ -907,6 +907,7 @@
                                             <option value="">Mary Kavere</option>    
                                             <option value="">Ann Wanja</option>                                                               
                                         </select>
+                                        <input class="form-control form-control-sm" type="week" value="2019-W33" id="example-week-input">
                                     </div>
                                 </div>
                                 <div class="card-body">
@@ -916,15 +917,42 @@
                         </div>
                         <div class="col-xl-6 col-md-7 px-sm-30px">
                             <div class="card">
-                                <div class="card-header">
+                                <div class="card-header bg-transparent border-bottom">
+                                    <div class="d-flex flex-wrap align-items-start">
+                                        <div class="me-2 d-flex">
+                                            <select class="form-control selectpicker" data-live-search="true" title="Select Stock Type " data-style="form-select btn border btn-sm pe-5">
+                                                <option value="" selected>Sales</option>
+                                                <option value="">Production</option>   
+                                            </select>
+                                            <input class="form-control form-control-sm mx-3 select-week d-none" type="week" value="2019-W33" id="example-week-input">
+    
+                                        </div>
+                                        <ul class="nav nav-tabs nav-tabs-custom card-header-tabs ms-auto" role="tablist">
+                                            <li class="nav-item nav-yearly" role="presentation">
+                                                <a class="nav-link active nav-yearly" data-bs-toggle="tab" href="#" role="tab" aria-selected="true">
+                                                    Yearly
+                                                </a>
+                                            </li>
+                                            <li class="nav-item nav-weekly" role="presentation">
+                                                <a class="nav-link" data-bs-toggle="tab" href="#" role="tab" aria-selected="false" tabindex="-1">
+                                                    Weekly
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    
+                                </div>
+                                
+                                <div class="card-header d-none">
                                     <h4 class="card-title">Sales Perfomance</h4>
                                 </div>
                                 <div class="card-body">
                                     
 
-                                    <div class="pt-">
+                                    <div class="vales-options-cont">
                                         <!-- <div id="annual-sales" class="apex-charts" dir="ltr"></div> -->
                                         <div id="annual-sales" class="" dir="ltr"></div>
+                                        <div id="weekly-sales" class="d-none" dir="ltr"></div>
                                     </div>
                                 </div>
                             </div>
@@ -1049,6 +1077,7 @@
     <script src="https://code.highcharts.com/modules/accessibility.js"></script>
 
     <script src="assets/js/pages/annual-sales-perfomance.js "></script>
+    <script src="assets/js/pages/weekly-sales-perfomance.js "></script>
 
 
 

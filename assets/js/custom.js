@@ -65,6 +65,16 @@ $(window).on('load', function() {
         $('.chat-room-place-holder').addClass('d-none').siblings().removeClass('d-none')
     })
 
+    $('.nav-yearly').on('click', function(){
+        $('.vales-options-cont #annual-sales').removeClass('d-none').siblings().addClass('d-none')
+        $('.select-week').addClass('d-none')
+    })
+
+    $('.nav-weekly').on('click', function(){
+        $('.vales-options-cont #weekly-sales').removeClass('d-none').siblings().addClass('d-none');
+        $('.select-week').removeClass('d-none')
+    })
+
 });
 
 $(document).ready(function(){

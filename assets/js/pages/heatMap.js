@@ -19,7 +19,10 @@ Highcharts.chart('heatMap', {
 
 
     title: {
-        text: "Weekly Perfomance"
+        text: "Weekly Perfomance",
+        style: {
+            fontSize: '14px' 
+         }
     },
 
     xAxis: {
@@ -94,7 +97,7 @@ Highcharts.chart('heatMap', {
         verticalAlign: 'bottom',
         y: 10,
         // align: 'middle',
-        symbolWidth: 380,
+        symbolWidth: 280,
     },
 
 
