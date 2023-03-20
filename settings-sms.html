@@ -10,7 +10,7 @@
     <title>PaySol | Connecting you to your world</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta content="POS Admin portal meant for businesses such as restaurants, wines and spirits and so on" name="description" />
-     <meta content="Levetot" name="author" />
+    <meta content="Levetot" name="author" />
     <!-- App favicon -->
     <link rel="shortcut icon" href="assets/images/favicon.svg">
 
@@ -579,9 +579,9 @@
                             <!-- Left sidebar -->
                             <div class="email-leftbar card calc-h-3px-md">
                                 <div class="mail-list mt-4">
-                                    <a href="settings.html" class="active"><i class="mdi mdi-store me-2 font-18px"></i> My Store</a>
-                                    <a href="settings-general.html"><i class="mdi mdi-application-cog me-2 font-18px"></i>General Settings</a>
-                                    <a href="settings-sms.html"><i class="mdi mdi-message-cog-outline me-2 font-18px"></i>SMS Reports</a>
+                                    <a href="settings.html" ><i class="mdi mdi-store me-2 font-18px"></i> My Store</a>
+                                    <a href="settings-general.html" ><i class="mdi mdi-application-cog me-2 font-18px"></i>General Settings</a>
+                                    <a href="settings-sms.html" class="active"><i class="mdi mdi-message-cog-outline me-2 font-18px"></i>SMS Reports</a>
                                 </div>
                             </div>
                             <!-- End Left sidebar -->
@@ -598,78 +598,128 @@
                                                 </div>
                                             </div>
                                             <div class="col-8">
-                                                <h4 class="card-title mb-4">Your Business Details</h4>
-                                                <div class="col-12 mb-4">
-                                                    <div class="d-flex align-items-center">
-                                                        <div>
-                                                            <img class="avatar-xl rounded-circle" src="assets/images/users/avatar-1.png" alt="Header Avatar">
-                                                        </div>
-                                                        <div>
-                                                            <button type="button" class="btn btn-success waves-effect btn-label waves-light mx-3">
-                                                                <i class="mdi mdi-camera-flip-outline label-icon"></i> Change Account Photo
-                                                            </button>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <p>This information will appear on your Receipts</p>
+                                                <h4 class="card-title mb-4 d-none">SMS Reports Settings</h4>
+                                                
+                                                <p class="d-non">Set up your Messaging notification preferences for your Business.</p>
                                                 <div class="row">
-                                                    <div class="col-12">
+                                                    
+                                                    <div class="col-12 d-none">
                                                         <div class="mb-3">
-                                                            <label for="formrow-firstname-input" class="form-label">Business Name <span class="text-danger">*</span></label>
-                                                            <input type="text" class="form-control" id="formrow-firstname-input" placeholder="Enter The Store Name">
+                                                            <label for="formrow-firstname-input text-black text-capitalize" class="form-label">First Day Of The week <span class="text-danger">*</span></label>
+                                                            <p>This will help with displaying weekly collections.</p>
                                                         </div>
                                                     </div>
-                                                    <div class="col-12">
-                                                        <h5 class="mt-4 text-capitalize card-title">Contact Information</h5>
-                                                        <p>This information will appear on your Receipts</p>
+                                                    <div class="col-12 mb-0 d-none">
+                                                        <div class="form-check mb-3">
+                                                            <input class="form-check-input" type="radio" name="first-day"
+                                                                id="week-sunday">
+                                                            <label class="form-check-label" for="week-sunday">
+                                                                Sundays
+                                                            </label>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-12 mb-5 d-none">
+                                                        <div class="form-check mb-3">
+                                                            <input class="form-check-input" type="radio" name="first-day"
+                                                                id="week-sunday" checked>
+                                                            <label class="form-check-label" for="week-sunday">
+                                                                Mondays
+                                                            </label>
+                                                        </div>
                                                     </div>
 
                                                     <div class="col-12">
                                                         <div class="mb-3">
-                                                            <label for="formrow-firstname-input" class="form-label">Business Email <span class="text-danger">*</span></label>
-                                                            <input type="text" class="form-control" id="formrow-firstname-input" placeholder="email@email.com">
+                                                            <label for="formrow-firstname-input" class="form-label text-black text-capitalize">SMS Sales Reports <span class="text-danger">*</span></label>
+                                                            <p>In what duration of periods would you like to be receiving sales reports. This will be sent to both specified emails and phone numbers in form of SMS</p>
                                                         </div>
                                                     </div>
-
-                                                    <div class="col-12">
-                                                        <div class="mb-3">
-                                                            <label for="formrow-firstname-input" class="form-label">Business Phone Number <span class="text-danger">*</span></label>
-                                                            <input type="text" class="form-control" id="formrow-firstname-input" placeholder="Phone Number">
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="col-12">
-                                                        <h5 class="mt-4 text-capitalize card-title">Postal Address</h5>
-                                                        <p>This information will appear on your Receipts</p>
-                                                    </div>
-                                                    <div class="col-7">
-                                                        <div class="mb-3">
-                                                            <label for="formrow-firstname-input" class="form-label">Postal Code <span class="text-danger">*</span></label>
-                                                            <input type="text" class="form-control" id="formrow-firstname-input" placeholder="Enter Postal Number">
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="col-5">
-                                                        <div class="mb-3">
-                                                            <label for="formrow-inputState" class="form-label">Postal Town</label>
-                                                            <select id="formrow-inputState" data-live-search="true" class="form-control selectpicker form-select" title="Select Postal Town">
-                                                                <option>Nairobi</option>
-                                                                <option>Nakuru</option>
-                                                                <option value="">Kericho</option>
-                                                                <option value="">Eldoret</option>
-                                                                <option value="">Kisumu</option>
-                                                                <option value="">Mombasa</option>
-                                                            </select>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-12">
-                                                        <div class="mb-3">
-                                                            <label class="form-label text-capitalize">Physical address</label>
-                                                            <div>
-                                                                <textarea placeholder="Enter Address" required="" class="form-control" rows="3"></textarea>
+                                                    <div class="col-12 mb-2">
+                                                        <div class="form-check form-check-info mb-0">
+                                                            <input class="form-check-input" type="checkbox" id="monthly-sales" checked>
+                                                            <label class="form-check-label" for="monthly-sales">
+                                                                Monthly Sales Reports
+                                                            </label>
+                                                            <div class="row">
+                                                                <div class="col-sm-12 col-md-6">
+                                                                    <label for="monthly-sales"><p class="text-black-50">You will be charged <strong class="text-black fw-semibold">KES 325.00</strong> Per Contact that receives the notification per month</p></label>
+                                                                </div>
                                                             </div>
                                                         </div>
                                                     </div>
+
+                                                    <div class="col-12 mb-2">
+                                                        <div class="form-check form-check-info mb-0">
+                                                            <input class="form-check-input" type="checkbox" id="weekly-sales">
+                                                            <label class="form-check-label" for="weekly-sales">
+                                                                Weekly Sales Reports
+                                                            </label>
+                                                            <div class="row">
+                                                                <div class="col-sm-12 col-md-6">
+                                                                    <label for="weekly-sales"><p class="text-black-50">You will be charged <strong class="text-black fw-semibold">KES 525.00</strong> Per Contact that receives the notification per month</p></label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-12 mb-2">
+                                                        <div class="form-check form-check-info mb-0">
+                                                            <input class="form-check-input" type="checkbox" id="daily-sales">
+                                                            <label class="form-check-label" for="daily-sales">
+                                                                Daily Sales Reports
+                                                            </label>
+                                                            <div class="row">
+                                                                <div class="col-sm-12 col-md-6">
+                                                                    <label for="daily-sales"><p class="text-black-50">You will be charged <strong class="text-black fw-semibold">KES 1,000.00</strong> Per Contact that receives the notification per month</p></label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-12">
+                                                        <div class="mb-3">
+                                                            <label for="formrow-firstname-input" class="form-label text-black text-capitalize">SMS Sales Reports <span class="text-danger">*</span></label>
+                                                            <p>In what duration of periods would you like to be receiving sales reports. This will be sent to both specified emails and phone numbers in form of SMS</p>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-12 mt-2 p-4 bg-warning bg-opacity-10">
+                                                        <div class="mb-3">
+                                                            <label for="formrow-firstname-input" class="form-label text-capitalize text-black">Contacts to receive SMS Sales Reports<span class="text-danger">*</span></label>
+                                                            <p>The contacts you enlist below will be receiving the sales reports in the frequency you select up above.</p>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col-12 contact-cont">
+                                                                <div class="row">
+                                                                    <div class="col-sm-12 col-md-6 mb-3">
+                                                                        <div class="form-group">
+                                                                            <label for="">Recipients Name</label>
+                                                                            <input type="text" placeholder="Full Name" class="form-control" spellcheck="false" data-ms-editor="true">
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-sm-12 col-md-3 mb-3">
+                                                                        <div class="form-group">
+                                                                            <label for="">Email Address</label>
+                                                                            <input type="email" placeholder="email@email.com" class="form-control" spellcheck="false" data-ms-editor="true">
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-sm-12 col-md-3 mb-3">
+                                                                        <div class="form-group">
+                                                                            <label for="">Phone Number</label>
+                                                                            <input type="text" placeholder="Enter Phone No." class="form-control" spellcheck="false" data-ms-editor="true">
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <button class="btn btn-outline-primary waves-effect waves-light w-100 clone-contacts" type="submit ">
+                                                                    <i class="bx bx-plus me-1"></i> Add Another Contact
+                                                                </button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    
 
                                                 </div>
                                             </div>
