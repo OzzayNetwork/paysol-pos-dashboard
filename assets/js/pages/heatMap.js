@@ -9,8 +9,8 @@ Highcharts.chart('heatMap', {
 
     chart: {
         type: 'heatmap',
-        marginTop: 80,
-        marginBottom: 0,
+        marginTop: 70,
+        marginBottom: 70,
         plotBorderWidth: 0,
         style: {
             fontFamily: '"Poppins",sans-serif'
@@ -31,7 +31,9 @@ Highcharts.chart('heatMap', {
     yAxis: {
         categories: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri','Sat', 'Sun'],
         title: null,
-        reversed: true
+        reversed: true,
+        gridLineColor: '#c2c2c2',
+        gridLineWidth: 0
     },
 
     accessibility: {
@@ -52,13 +54,13 @@ Highcharts.chart('heatMap', {
         maxColor: Highcharts.getOptions().colors[0],
         visible:true,
         stops: [
-                [0, '#ebedf0'],
-                [0.2, '#c6e6d0'],
-                [0.4, '#7dc794'],
-                [0.6, '#46af68'],
-                [0.7, '#358e52'],
-                [1, '#215d34']
-            ] ,
+            [0, '#ebedf0'],
+            [0.2, '#c6e6d0'],
+            [0.4, '#7dc794'],
+            [0.6, '#46af68'],
+            [0.7, '#358e52'],
+            [1, '#215d34']
+        ] ,
 
         // stops: [
         //     [0, '#ebedf0'],
@@ -87,6 +89,14 @@ Highcharts.chart('heatMap', {
         symbolHeight: 280,
         y: 10,
     },
+
+    legend: {
+        verticalAlign: 'bottom',
+        y: 10,
+        // align: 'middle',
+        symbolWidth: 380,
+    },
+
 
     tooltip: {
         formatter: function () {
