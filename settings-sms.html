@@ -602,33 +602,6 @@
                                                 
                                                 <p class="d-non">Set up your Messaging notification preferences for your Business.</p>
                                                 <div class="row">
-                                                    
-                                                    <div class="col-12 d-none">
-                                                        <div class="mb-3">
-                                                            <label for="formrow-firstname-input text-black text-capitalize" class="form-label">First Day Of The week <span class="text-danger">*</span></label>
-                                                            <p>This will help with displaying weekly collections.</p>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-12 mb-0 d-none">
-                                                        <div class="form-check mb-3">
-                                                            <input class="form-check-input" type="radio" name="first-day"
-                                                                id="week-sunday">
-                                                            <label class="form-check-label" for="week-sunday">
-                                                                Sundays
-                                                            </label>
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="col-12 mb-5 d-none">
-                                                        <div class="form-check mb-3">
-                                                            <input class="form-check-input" type="radio" name="first-day"
-                                                                id="week-sunday" checked>
-                                                            <label class="form-check-label" for="week-sunday">
-                                                                Mondays
-                                                            </label>
-                                                        </div>
-                                                    </div>
-
                                                     <div class="col-12">
                                                         <div class="mb-3">
                                                             <label for="formrow-firstname-input" class="form-label text-black text-capitalize">SMS Sales Reports <span class="text-danger">*</span></label>
@@ -678,9 +651,44 @@
                                                     </div>
 
                                                     <div class="col-12">
+                                                        <div class="row">
+                                                            <div class="col-12 d-non">
+                                                                <div class="mb-3">
+                                                                    <label for="formrow-firstname-input text-black text-capitalize" class="form-label">First Day Of The week <span class="text-danger">*</span></label>
+                                                                    <p>This is applicable for the case of the weekly reports</p>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-12 mb-0 d-non">
+                                                                <div class="form-check mb-3">
+                                                                    <input class="form-check-input" type="radio" name="first-day"
+                                                                        id="week-sunday">
+                                                                    <label class="form-check-label" for="week-sunday">
+                                                                        Sundays
+                                                                    </label>
+                                                                </div>
+                                                            </div>
+        
+                                                            <div class="col-12 mb-1 d-non">
+                                                                <div class="form-check mb-3">
+                                                                    <input class="form-check-input" type="radio" name="first-day"
+                                                                        id="week-sunday" checked>
+                                                                    <label class="form-check-label" for="week-sunday">
+                                                                        Mondays
+                                                                    </label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-12">
                                                         <div class="mb-3">
-                                                            <label for="formrow-firstname-input" class="form-label text-black text-capitalize">SMS Sales Reports <span class="text-danger">*</span></label>
-                                                            <p>In what duration of periods would you like to be receiving sales reports. This will be sent to both specified emails and phone numbers in form of SMS</p>
+                                                            <label for="formrow-firstname-input" class="form-label text-black text-capitalize">At what time would you like to receive the SMS notifications? <span class="text-danger">*</span></label>
+                                                            <p>Select time of day to receive the notifications</p>
+                                                            <dv class="row">
+                                                                <div class="col-4">
+                                                                    <input class="form-control" type="time" value="00:00:00" id="example-time-input">
+                                                                </div>
+                                                            </dv>
                                                         </div>
                                                     </div>
 
