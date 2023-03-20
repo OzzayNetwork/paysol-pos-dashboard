@@ -56,7 +56,7 @@
 
         <!-- common modals -->
             <!-- new contact modal -->
-            <div class="modal fade add-contact" data-bs-backdrop="static" data-bs-keyboard="false" id="add-contact" tabindex="-1" role="dialog" aria-labelledby="composemodalTitle" aria-hidden="true">
+           <div class="modal fade add-contact" data-bs-backdrop="static" data-bs-keyboard="false" id="add-contact" tabindex="-1" role="dialog" aria-labelledby="composemodalTitle" aria-hidden="true">
                 <div class="modal-dialog modal-dialog-centered" role="document">
                     <div class="modal-content">
                         <div class="modal-header bg-primary text-white">
@@ -67,7 +67,7 @@
                             <div>
                                 <div class="mb-5">
                                     <div class="form-group mb-3">
-                                        <label for="">Contact name</label>
+                                        <label for="">Contact Name(s)</label>
                                         <input type="text" class="form-control" placeholder="Enter The Tittle for the contacts you are to upload">
                                     </div>
 
@@ -80,9 +80,17 @@
                                         <input type="email" class="form-control" placeholder="Enter the email address">
                                     </div>
 
+                                   
+
                                     <div class="form-group mb-3">
-                                        <label for="">Contact's title</label>
-                                        <input type="email" class="form-control" placeholder="Enter the email address">
+                                        <label for="">Contact Group</label>
+                                        <select class="form-control selectpicker form-select text-black" data-live-search="true" title="Select UOM" data-style="form-select btn border text-black">
+                                            <option value="" selected>None</option>
+                                            <option value="">Customers</option>   
+                                            <option value="">Suppliers</option> 
+                                            <option value="">Directors</option> 
+                                            <option value="">Staff Members</option>                                                               
+                                        </select>
                                     </div>
 
                                 </div>
@@ -657,8 +665,12 @@
                                             <button data-bs-toggle="modal" data-bs-target="#upload-contacts" type="button" class="btn btn-secondary dropdown-toggle option-selector mr-15px" data-bs-toggle="offcanvas" data-bs-target="#dt__filter" aria-controls="offcanvasRight">
                                                 <i class="mdi mdi-upload-multiple  font-size-16"></i> <span class="pl-1 d-md-inline">Upload Contacts excel file</span>
                                             </button>
-                                            <button data-bs-toggle="modal" data-bs-target="#add-contact" type="button" class="btn btn-primary dropdown-toggle option-selector">
+                                            <button data-bs-toggle="modal" data-bs-target="#add-contact" type="button" class="btn btn-info dropdown-toggle option-selector mr-15px">
                                                 <i class="mdi mdi-account-plus-outline  font-size-16"></i> <span class="pl-1 d-md-inline">Add A Contact</span>
+                                            </button>
+
+                                            <button data-bs-toggle="modal" data-bs-target="#add-contact" type="button" class="btn btn-primary dropdown-toggle option-selector">
+                                                <i class="mdi mdi-account-multiple-plus-outline  font-size-16"></i> <span class="pl-1 d-md-inline">Add A Contact Group</span>
                                             </button>
                                         </div>
 
@@ -683,7 +695,6 @@
                                                     </div>
                                                 </th>
                                                 <th scope="col">Name</th>
-                                                <th scope="col">Tags</th>
                                                 <th scope="col">Email</th>
                                                 <th scope="col">Phone</th>
                                                 <th scope="col">Stats</th>
@@ -709,12 +720,7 @@
                                                     <h5 class="font-size-14 mb-1"><a href="javascript: void(0);" class="text-dark">Mark Ellison</a></h5>
                                                     <p class="text-muted mb-0">Full Stack Developer</p>
                                                 </td>
-                                                <td>
-                                                    <div>
-                                                        <a href="javascript: void(0);" class="badge badge-soft-primary font-size-11 m-1">Developer</a>
-                                                        <a href="javascript: void(0);" class="badge badge-soft-primary font-size-11 m-1">Investor</a>
-                                                    </div>
-                                                </td>
+                                                
                                                 <td>david@skote.com</td>
                                                 <td>
                                                     <a href="tell:254704549859">254 704 549 859</a>
@@ -768,13 +774,7 @@
                                                     <p class="text-muted mb-0">32 Contacts</p>
                                                 </td>
 
-                                                <td>
-                                                    <div>
-                                                        <a href="javascript: void(0);" class="badge badge-soft-primary font-size-11 m-1">Html</a>
-                                                        <a href="javascript: void(0);" class="badge badge-soft-primary font-size-11 m-1">Css</a>
-                                                        <a href="javascript: void(0);" class="badge badge-soft-primary font-size-11 m-1">2 + more</a>
-                                                    </div>
-                                                </td>
+                                               
                                                 <td>-</td>
                                                 <td>
                                                     -
@@ -827,12 +827,7 @@
                                                     <h5 class="font-size-14 mb-1"><a href="javascript: void(0);" class="text-dark">Rafael Morales</a></h5>
 
                                                 </td>
-                                                <td>
-                                                    <div>
-                                                        <a href="javascript: void(0);" class="badge badge-soft-primary font-size-11 m-1">Debtor</a>
-                                                        <a href="javascript: void(0);" class="badge badge-soft-primary font-size-11 m-1">Person of Intrest</a>
-                                                    </div>
-                                                </td>
+                                                
                                                 <td>Rafael@skote.com</td>
 
                                                 <td>
@@ -887,9 +882,7 @@
                                                     <h5 class="font-size-14 mb-1"><a href="javascript: void(0);" class="text-dark">Mark Ellison</a></h5>
                                                     <p class="text-muted mb-0">Full Stack Developer</p>
                                                 </td>
-                                                <td>
-                                                    -
-                                                </td>
+                                               
                                                 <td>mark@skote.com</td>
 
                                                 <td>
@@ -943,13 +936,7 @@
                                                     <h5 class="font-size-14 mb-1"><a href="javascript: void(0);" class="text-dark">Team of investors</a></h5>
                                                     <p class="text-muted mb-0">32 Contacts</p>
                                                 </td>
-                                                <td>
-                                                    <div>
-                                                        <a href="javascript: void(0);" class="badge badge-soft-primary font-size-11 m-1">veta campany</a>
-                                                        <a href="javascript: void(0);" class="badge badge-soft-primary font-size-11 m-1">Investors</a>
-
-                                                    </div>
-                                                </td>
+                                                
                                                 <td>-</td>
                                                 <td>
                                                     -
@@ -1001,9 +988,7 @@
                                                     <h5 class="font-size-14 mb-1"><a href="javascript: void(0);" class="text-dark">Shirley Smith</a></h5>
                                                     <p class="text-muted mb-0">Support team</p>
                                                 </td>
-                                                <td>
-                                                    -
-                                                </td>
+                                                
                                                 <td>shirley@skote.com</td>
 
                                                 <td>
@@ -1058,9 +1043,7 @@
                                                     <h5 class="font-size-14 mb-1"><a href="javascript: void(0);" class="text-dark">John Santiago</a></h5>
                                                     <p class="text-muted mb-0">The manager</p>
                                                 </td>
-                                                <td>
-                                                    -
-                                                </td>
+                                               
                                                 <td>john@skote.com</td>
 
                                                 <td>
@@ -1114,13 +1097,7 @@
                                                     <p class="text-muted mb-0">32 Contacts</p>
                                                 </td>
 
-                                                <td>
-                                                    <div>
-                                                        <a href="javascript: void(0);" class="badge badge-soft-primary font-size-11 m-1">Html</a>
-                                                        <a href="javascript: void(0);" class="badge badge-soft-primary font-size-11 m-1">Css</a>
-                                                        <a href="javascript: void(0);" class="badge badge-soft-primary font-size-11 m-1">2 + more</a>
-                                                    </div>
-                                                </td>
+                                                
                                                 <td>-</td>
                                                 <td>
                                                     -
@@ -1226,7 +1203,7 @@
             <!-- upload contacts modal -->
 
             <!-- adding a new contact -->
-            <div class="modal fade add-contact" data-bs-backdrop="static" data-bs-keyboard="false" id="add-contact" tabindex="-1" role="dialog" aria-labelledby="composemodalTitle" aria-hidden="true">
+           <div class="modal fade add-contact" data-bs-backdrop="static" data-bs-keyboard="false" id="add-contact" tabindex="-1" role="dialog" aria-labelledby="composemodalTitle" aria-hidden="true">
                 <div class="modal-dialog modal-dialog-centered" role="document">
                     <div class="modal-content">
                         <div class="modal-header bg-primary text-white">
@@ -1237,7 +1214,7 @@
                             <div>
                                 <div class="mb-5">
                                     <div class="form-group mb-3">
-                                        <label for="">Contact name</label>
+                                        <label for="">Contact Name(s)</label>
                                         <input type="text" class="form-control" placeholder="Enter The Tittle for the contacts you are to upload">
                                     </div>
 
@@ -1250,9 +1227,17 @@
                                         <input type="email" class="form-control" placeholder="Enter the email address">
                                     </div>
 
+                                   
+
                                     <div class="form-group mb-3">
-                                        <label for="">Contact's title</label>
-                                        <input type="email" class="form-control" placeholder="Enter the email address">
+                                        <label for="">Contact Group</label>
+                                        <select class="form-control selectpicker form-select text-black" data-live-search="true" title="Select UOM" data-style="form-select btn border text-black">
+                                            <option value="" selected>None</option>
+                                            <option value="">Customers</option>   
+                                            <option value="">Suppliers</option> 
+                                            <option value="">Directors</option> 
+                                            <option value="">Staff Members</option>                                                               
+                                        </select>
                                     </div>
 
                                 </div>

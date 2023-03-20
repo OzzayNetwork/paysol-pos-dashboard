@@ -54,7 +54,7 @@
 
         <!-- common modals -->
             <!-- new contact modal -->
-            <div class="modal fade add-contact" data-bs-backdrop="static" data-bs-keyboard="false" id="add-contact" tabindex="-1" role="dialog" aria-labelledby="composemodalTitle" aria-hidden="true">
+           <div class="modal fade add-contact" data-bs-backdrop="static" data-bs-keyboard="false" id="add-contact" tabindex="-1" role="dialog" aria-labelledby="composemodalTitle" aria-hidden="true">
                 <div class="modal-dialog modal-dialog-centered" role="document">
                     <div class="modal-content">
                         <div class="modal-header bg-primary text-white">
@@ -65,7 +65,7 @@
                             <div>
                                 <div class="mb-5">
                                     <div class="form-group mb-3">
-                                        <label for="">Contact name</label>
+                                        <label for="">Contact Name(s)</label>
                                         <input type="text" class="form-control" placeholder="Enter The Tittle for the contacts you are to upload">
                                     </div>
 
@@ -78,9 +78,17 @@
                                         <input type="email" class="form-control" placeholder="Enter the email address">
                                     </div>
 
+                                   
+
                                     <div class="form-group mb-3">
-                                        <label for="">Contact's title</label>
-                                        <input type="email" class="form-control" placeholder="Enter the email address">
+                                        <label for="">Contact Group</label>
+                                        <select class="form-control selectpicker form-select text-black" data-live-search="true" title="Select UOM" data-style="form-select btn border text-black">
+                                            <option value="" selected>None</option>
+                                            <option value="">Customers</option>   
+                                            <option value="">Suppliers</option> 
+                                            <option value="">Directors</option> 
+                                            <option value="">Staff Members</option>                                                               
+                                        </select>
                                     </div>
 
                                 </div>
