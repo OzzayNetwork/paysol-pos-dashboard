@@ -621,7 +621,7 @@
                                                         
                                                     </div>
 
-                                                    <div class="col-12 mb-5">
+                                                    <div class="col-12 mb-3">
                                                         <div class="form-check mb-3">
                                                             <input class="form-check-input" type="radio" name="change-price"
                                                                 id="no-change" checked>
@@ -647,7 +647,7 @@
                                                         </div>
                                                     </div>
 
-                                                    <div class="col-12 mb-5">
+                                                    <div class="col-12 mb-3">
                                                         <div class="form-check mb-3">
                                                             <input class="form-check-input" type="radio" name="first-day"
                                                                 id="week-sunday" checked>
@@ -659,87 +659,25 @@
 
                                                     <div class="col-12">
                                                         <div class="mb-3">
-                                                            <label for="formrow-firstname-input" class="form-label text-black text-capitalize">SMS Sales Reports <span class="text-danger">*</span></label>
-                                                            <p>In what duration of periods would you like to be receiving sales reports. This will be sent to both specified emails and phone numbers in form of SMS</p>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-12 mb-2">
-                                                        <div class="form-check form-check-info mb-0">
-                                                            <input class="form-check-input" type="checkbox" id="monthly-sales" checked>
-                                                            <label class="form-check-label" for="monthly-sales">
-                                                                Monthly Sales Reports
-                                                            </label>
-                                                            <div class="row">
-                                                                <div class="col-sm-12 col-md-6">
-                                                                    <label for="monthly-sales"><p class="text-black-50">You will be charged <strong class="text-black fw-semibold">KES 325.00</strong> Per Contact that receives the notification per month</p></label>
-                                                                </div>
-                                                            </div>
+                                                            <label for="formrow-firstname-input text-black text-capitalize" class="form-label">Menu Categories <span class="text-danger"></span></label>
+                                                            <p>So far you have <strong class="text-black fw-semibold">5</strong> Menu categories, click the button below to update the menu items for your Resturant.</p>
+                                                            <button data-bs-toggle="modal" data-bs-target="#menu-items" type="button" class="btn btn-info waves-effect waves-light">
+                                                                <i class="bx bx-food-menu font-size-16 align-middle me-2"></i> Update Menu Categories
+                                                            </button>
                                                         </div>
                                                     </div>
 
-                                                    <div class="col-12 mb-2">
-                                                        <div class="form-check form-check-info mb-0">
-                                                            <input class="form-check-input" type="checkbox" id="weekly-sales">
-                                                            <label class="form-check-label" for="weekly-sales">
-                                                                Weekly Sales Reports
-                                                            </label>
-                                                            <div class="row">
-                                                                <div class="col-sm-12 col-md-6">
-                                                                    <label for="weekly-sales"><p class="text-black-50">You will be charged <strong class="text-black fw-semibold">KES 525.00</strong> Per Contact that receives the notification per month</p></label>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="col-12 mb-2">
-                                                        <div class="form-check form-check-info mb-0">
-                                                            <input class="form-check-input" type="checkbox" id="daily-sales">
-                                                            <label class="form-check-label" for="daily-sales">
-                                                                Daily Sales Reports
-                                                            </label>
-                                                            <div class="row">
-                                                                <div class="col-sm-12 col-md-6">
-                                                                    <label for="daily-sales"><p class="text-black-50">You will be charged <strong class="text-black fw-semibold">KES 1,000.00</strong> Per Contact that receives the notification per month</p></label>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="col-12 mt-2 p-4 bg-warning bg-opacity-10">
+                                                    <div class="col-12">
                                                         <div class="mb-3">
-                                                            <label for="formrow-firstname-input" class="form-label text-capitalize text-black">Contacts to receive SMS Sales Reports<span class="text-danger">*</span></label>
-                                                            <p>The contacts you enlist below will be receiving the sales reports in the frequency you select up above.</p>
-                                                        </div>
-                                                        <div class="row">
-                                                            <div class="col-12 contact-cont">
-                                                                <div class="row">
-                                                                    <div class="col-sm-12 col-md-6 mb-3">
-                                                                        <div class="form-group">
-                                                                            <label for="">Recipients Name</label>
-                                                                            <input type="text" placeholder="Full Name" class="form-control" spellcheck="false" data-ms-editor="true">
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="col-sm-12 col-md-3 mb-3">
-                                                                        <div class="form-group">
-                                                                            <label for="">Email Address</label>
-                                                                            <input type="email" placeholder="email@email.com" class="form-control" spellcheck="false" data-ms-editor="true">
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="col-sm-12 col-md-3 mb-3">
-                                                                        <div class="form-group">
-                                                                            <label for="">Phone Number</label>
-                                                                            <input type="text" placeholder="Enter Phone No." class="form-control" spellcheck="false" data-ms-editor="true">
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="col-12">
-                                                                <button class="btn btn-outline-primary waves-effect waves-light w-100 clone-contacts" type="submit ">
-                                                                    <i class="bx bx-plus me-1"></i> Add Another Contact
-                                                                </button>
-                                                            </div>
+                                                            <label for="formrow-firstname-input text-black text-capitalize" class="form-label">Order Points <span class="text-danger"></span></label>
+                                                            <p>Add and edit order points that will be used for double printing of bills to enable in creating order for the diffrent points.</p>
+                                                            <button data-bs-toggle="modal" data-bs-target="#order-points" type="button" class="btn btn-info waves-effect waves-light">
+                                                                <i class="dripicons-document font-size-16 align-middle me-2"></i> Update Order Points
+                                                            </button>
                                                         </div>
                                                     </div>
+
+                                                   
                                                     
 
                                                 </div>
@@ -768,6 +706,176 @@
                 <!-- container-fluid -->
             </div>
             <!-- End Page-content -->
+
+            <!-- menu categories modal -->
+            <div class="modal fade add-contact" data-bs-backdrop="static" data-bs-keyboard="false" id="menu-items" tabindex="-1" role="dialog" aria-labelledby="composemodalTitle" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header bg-success text-white">
+                            <h5 class="modal-title text-white" id="composemodalTitle">Your Menu Categories</h5>
+                            <button type="button" class="btn-close text-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div>
+                                <table class="table table-editable-1 align-middle table-edits table-striped">
+                                    <thead class="table-light">
+                                        <tr class="text-uppercase table-light">
+                                            <th>#</th>
+                                            <th>Menu Category</th>
+                                            
+                                            <th></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr data-id="1">
+                                            <td style="width: 80px">1.</td>
+                                            <td class="">
+                                                Breakfast
+                                            </td>
+                                            <td></td>
+                                        </tr>
+
+                                        <tr data-id="1">
+                                            <td style="width: 80px">2.</td>
+                                            <td class="">
+                                                Dinner
+                                            </td>
+                                            <td></td>
+                                        </tr>
+
+                                        <tr data-id="1">
+                                            <td style="width: 80px">3.</td>
+                                            <td class="">
+                                                Whiskey
+                                            </td>
+                                            <td></td>
+                                        </tr>
+
+                                        <tr data-id="1">
+                                            <td style="width: 80px">4.</td>
+                                            <td class="">
+                                                Desserts
+                                            </td>
+                                            <td></td>
+                                        </tr>
+
+                                        <tr data-id="1">
+                                            <td style="width: 80px">5.</td>
+                                            <td class="">
+                                                <input type="text " class="form-control " placeholder="Enter Menu Category Name" spellcheck="false" data-ms-editor="true">
+                                            </td>
+                                            <td></td>
+
+                                        </tr>
+
+                                        <tr class="cloneCharges d-none">
+                                            <td style="width: 80px " class="categoryIndex ">#</td>
+                                            <td class="">
+                                                <input type="text " class="form-control " placeholder="Enter Menu Category Name" spellcheck="false" data-ms-editor="true">
+                                            </td>
+                                            <td class="text-right cell-change d-flex align-items-center justify-content-end">
+                                                <a class="btn btn-light btn-rounded waves-effect btn-circle btn-transparent cancel-new-category-2 " title="Cancel "><i class="bx bx-x "></i></a>
+                                            </td>
+                                        </tr>
+
+
+                                    </tbody>
+                                    <tfoot>
+                                        <tr>
+                                            <td colspan="7" class="bg-light add-field-1 cursor-pointer">
+                                                <span class="d-flex align-items-center "><i class="dripicons-plus mr-5 d-flex justify-content-center align-items-center font-21 "></i><span class="pl-5 ">Add Menu Category</span></span>
+                                            </td>
+                                        </tr>
+                                    </tfoot>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-success upload-the-contacts">Save Changes <i class="bx bx-check-double  ms-1"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- menu categories modal -->
+
+            <!-- order points -->
+            <div class="modal fade add-contact" data-bs-backdrop="static" data-bs-keyboard="false" id="order-points" tabindex="-1" role="dialog" aria-labelledby="composemodalTitle" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header bg-dark text-white">
+                            <h5 class="modal-title text-white" id="composemodalTitle">Your Order Points</h5>
+                            <button type="button" class="btn-close text-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div>
+                                <table class="table table-editable-1 align-middle table-edits table-striped">
+                                    <thead class="table-light">
+                                        <tr class="text-uppercase table-light">
+                                            <th>#</th>
+                                            <th>Order Points</th>
+                                            
+                                            <th></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr data-id="1">
+                                            <td style="width: 80px">1.</td>
+                                            <td class="">
+                                                Kitchen/Resturant
+                                            </td>
+                                            <td></td>
+                                        </tr>
+
+                                        <tr data-id="1">
+                                            <td style="width: 80px">2.</td>
+                                            <td class="">
+                                                Bar Area
+                                            </td>
+                                            <td></td>
+                                        </tr>
+
+                                        
+
+                                        <tr data-id="1">
+                                            <td style="width: 80px">3.</td>
+                                            <td class="">
+                                                <input type="text " class="form-control " placeholder="Enter order area" spellcheck="false" data-ms-editor="true">
+                                            </td>
+                                            <td></td>
+
+                                        </tr>
+
+                                        <tr class="cloneCharges d-none">
+                                            <td style="width: 80px " class="categoryIndex ">#</td>
+                                            <td class="">
+                                                <input type="text " class="form-control " placeholder="Enter order area" spellcheck="false" data-ms-editor="true">
+                                            </td>
+                                            <td class="text-right cell-change d-flex align-items-center justify-content-end">
+                                                <a class="btn btn-light btn-rounded waves-effect btn-circle btn-transparent cancel-new-category-2 " title="Cancel "><i class="bx bx-x "></i></a>
+                                            </td>
+                                        </tr>
+
+
+                                    </tbody>
+                                    <tfoot>
+                                        <tr>
+                                            <td colspan="7" class="bg-light add-field-1 cursor-pointer">
+                                                <span class="d-flex align-items-center "><i class="dripicons-plus mr-5 d-flex justify-content-center align-items-center font-21 "></i><span class="pl-5 ">Add Menu Category</span></span>
+                                            </td>
+                                        </tr>
+                                    </tfoot>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-success upload-the-contacts">Save Changes <i class="bx bx-check-double  ms-1"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- end of order points -->
 
 
             <footer class="footer ">

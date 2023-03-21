@@ -1277,4 +1277,8 @@
             .highcharts-credits{
                 display: none;
             }
+            .modal .cell-change{
+                min-width: 190px;
+                width: auto;
+            }
             
