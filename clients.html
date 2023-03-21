@@ -664,9 +664,16 @@
                     <div class="row">
                         <div class="col-12">
                             <div class="card">
-                                <div class="card-header">
-                                    <h4 class="card-title">Clients register</h4>
-                                    <p>List of clients in the system</p>
+                                <div class="card-header d-flex justify-content-between">
+                                    <div>
+                                        <h4 class="card-title">Clients register</h4>
+                                        <p>List of clients Registered</p>
+                                    </div>
+                                    <div>
+                                        <button data-bs-toggle="modal" data-bs-target="#add-contact" type="button" class="btn btn-primary dropdown-toggle option-selector write-msg-btn">
+                                            <i class="mdi mdi-comment-processing-outline  font-size-16"></i> <span class="pl-1 d-md-inline">Compose Message</span>
+                                        </button>
+                                    </div>
                                 </div>
                                 <div class="card-body">
 
@@ -679,9 +686,9 @@
                                                 <th>Customer</th>
                                                 <th>Email/Phone</th>
                                                 <th>Added by</th>
-                                                <th>Total transactions</th>
+                                                <th>Items Bought</th>
                                                 <th>Last seen</th>
-                                                <th class="text-right">Wallet Bal</th>
+                                                <th class="">Loyalty Points</th>
                                                 <th>Actions</th>
                                             </tr>
                                         </thead>
@@ -723,7 +730,7 @@
                                                 <td>
                                                     23 mar 2022 04:32PM
                                                 </td>
-                                                <td class="text-right text-uppercase"><strong class="data-carrency" data-selected-currency="UGX" data-base="UGX" data-amount="1400">ugx 1,400</strong></td>
+                                                <td>123</td>
                                                 <td>
                                                     <!-- Button trigger modal -->
                                                     <button type="button" class="btn btn-primary btn-sm btn-rounded waves-effect waves-light" data-bs-toggle="modal" data-bs-target=".transaction-detailModal">
@@ -767,7 +774,7 @@
                                                 <td>
                                                     14 Mar 2022 02:32PM
                                                 </td>
-                                                <td class="text-right text-uppercase"><strong class="data-carrency" data-selected-currency="UGX" data-base="UGX" data-amount="3000">ugx 3,000</strong></td>
+                                                <td>123</td>
                                                 <td>
                                                     <!-- Button trigger modal -->
                                                     <button type="button" class="btn btn-primary btn-sm btn-rounded waves-effect waves-light" data-bs-toggle="modal" data-bs-target=".transaction-detailModal">
@@ -811,7 +818,7 @@
                                                 <td>
                                                     25 Feb 2022 06:32PM
                                                 </td>
-                                                <td class="text-right text-uppercase"><strong class="data-carrency" data-selected-currency="UGX" data-base="UGX" data-amount="2200">ugx 2,200</strong></td>
+                                                <td>123</td>
                                                 <td>
                                                     <!-- Button trigger modal -->
                                                     <button type="button" class="btn btn-primary btn-sm btn-rounded waves-effect waves-light" data-bs-toggle="modal" data-bs-target=".transaction-detailModal">
@@ -855,7 +862,7 @@
                                                 <td>
                                                     22 April 2022 03:32PM
                                                 </td>
-                                                <td class="text-right text-uppercase"><strong class="data-carrency" data-selected-currency="UGX" data-base="UGX" data-amount="2000">ugx 2,000</strong></td>
+                                                <td>123</td>
                                                 <td>
                                                     <!-- Button trigger modal -->
                                                     <button type="button" class="btn btn-primary btn-sm btn-rounded waves-effect waves-light" data-bs-toggle="modal" data-bs-target=".transaction-detailModal">
@@ -882,7 +889,7 @@
                 <div class="modal-dialog modal-dialog-centered" role="document">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h5 class="modal-title" id="transaction-detailModalLabel">Transactions Details</h5>
+                            <h5 class="modal-title" id="transaction-detailModalLabel">Customer Details</h5>
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
@@ -893,50 +900,61 @@
                                     <tbody>
                                         <tr>
                                             <td style="width: 30%">
-                                                <p class="mb-0">Car Plate Number</p>
+                                                <p class="mb-0">Full Names</p>
                                             </td>
                                             <td style="width: 25%">
-                                                <h5 class="mb-0 text-uppercase">UAG 1235p</h5>
+                                                <h5 class="mb-0 text-uppercase">Kelvin Njuguna Ndungu</h5>
                                             </td>
 
                                         </tr>
                                         <tr>
                                             <td>
-                                                <p class="mb-0">Vehicle Category</p>
+                                                <p class="mb-0">Email</p>
                                             </td>
                                             <td>
-                                                <h5 class="mb-0">Salon Car</h5>
+                                                <h5 class="mb-0">email@email.com</h5>
                                             </td>
 
                                         </tr>
                                         <tr>
                                             <td>
-                                                <p class="mb-0">Payment Date</p>
+                                                <p class="mb-0">Phone No.</p>
                                             </td>
                                             <td>
-                                                <h5 class="mb-0">22 Apr 2022 06:54PM</h5>
+                                                <h5 class="mb-0">0704 549 859</h5>
                                             </td>
 
                                         </tr>
                                         <tr>
                                             <td>
-                                                <p class="mb-0">San Diego</p>
+                                                <p class="mb-0">Last Seen</p>
                                             </td>
                                             <td>
-                                                <h5 class="mb-0">1,026</h5>
+                                                <h5 class="mb-0">1 Jan 2022</h5>
                                             </td>
 
                                         </tr>
+
+                                        <tr>
+                                            <td>
+                                                <p class="mb-0">Last Transaction Amount</p>
+                                            </td>
+                                            <td>
+                                                <h5 class="mb-0">KES 12,900</h5>
+                                            </td>
+
+                                        </tr>
+
                                         <tr>
                                             <td colspan="2">
-                                                <p class="mb-0 pb-0">Amount Paid</p>
-                                                <h3>UGX 2,000</h3>
+                                                <p class="mb-0 pb-0">Loyalty Points</p>
+                                                <h3>123</h3>
                                             </td>
                                         </tr>
                                         <TR>
                                             <td col-span="2">
-                                                <p class="mb-2">Attended By<span class="text-primary"> Alex Sebeye</span></p>
-                                                <p class="mb-4">Toll taker's No. <span class="text-primary">0704549859</span></p>
+                                                <p class="mb-2">Registered By<span class="text-primary"> Alex Sebeye</span></p>
+                                                <p class="mb-4">Registered On <span class="text-primary">12 Dec 2022</span></p>
                                             </td>
                                         </TR>
                                     </tbody>
