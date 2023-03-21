@@ -1281,4 +1281,11 @@
                 min-width: 190px;
                 width: auto;
             }
+            .comparison-txt{
+                max-width: 100%;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                width: auto;
+                overflow: hidden;
+            }
             
