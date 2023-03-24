@@ -713,7 +713,7 @@
                             </span>
                         </div>
                         <div class="modal-body text-capitalize">
-                            <div class="d-flex justify-content-between align-items-center">
+                            <div class="d-fle d-none justify-content-between align-items-center">
                                 <span class="badge rounded-pill badge-soft-success text-uppercase">MPESA Transaction</span>
                                 <span class="close font-28 cursor-pointer" data-dismiss="modal" aria-label="Close">
                                     <span aria-hidden="true">&times;</span>
@@ -727,7 +727,7 @@
                                     </div>
                                     <h4 class="mb-0 text-uppercase">Calistus Simiyu</h4>
                                     <p class="text-muted text-uppercase mb-1">Cashier ID: 1234HYI</p>
-                                    <span class="text-uppercase badge badge-soft-info mt-4">Transaction Amount</span>
+                                    <span class="text-uppercase badge badge-soft-info mt-4">Bill Amount</span>
                                     <h2 class=" text-uppercase mt-1 mb-4"><span class="">KES 450.00</span></h2>
                                    
                                 </div>
@@ -738,7 +738,7 @@
                                             <thead class="table-border">
                                                 <tr>
                                                     <th colspan="4" class="text-black text-uppercase pb-0 mb-0">
-                                                        <blockquote class=""><span class="text-muted">Receipt No.</span> F32GDV9GC0
+                                                        <blockquote class=""><span class="text-muted">Bill No.</span> F32GDV9GC0
                                                         </blockquote>
                                                     </th>
                                                 </tr>
@@ -772,28 +772,12 @@
                                                     <th class="text-center pt-3">6</th>
                                                     <th colspan="2" class="text-right pt-3">KES&nbsp;450.00</th>
                                                 </tr>
-                                                <tr>
-                                                    <th colspan="2" class="pt-3 text-uppercase">MPESA Paid</th>
-                                                    <th class="text-center pt-3"></th>
-                                                    <th colspan="2" class="text-right pt-3">KES&nbsp;400</th>
-                                                </tr>
-
-                                                <tr>
-                                                    <th colspan="2" class="pt-3 text-uppercase">Cash Paid</th>
-                                                    <th class="text-center pt-3"></th>
-                                                    <th colspan="2" class="text-right pt-3">KES&nbsp;100</th>
-                                                </tr>
-
-                                                <tr>
-                                                    <th colspan="2" class="pt-3 text-uppercase">Change</th>
-                                                    <th class="text-center pt-3"></th>
-                                                    <th colspan="2" class="text-right pt-3">KES 50</th>
-                                                </tr>
+                                                
                                             </tfoot>
                                         </table>
                                     </div>
                                 </div>
-                                <p class="text-uppercase mt-3">MPESA Number <span class="fw-semibold">0704 549 859</span> </p>
+                                <p class="text-uppercase mt-3 d-none">MPESA Number <span class="fw-semibold">0704 549 859</span> </p>
                                 <div class="px-4 pt-3 mt-3 px-sm-0">
                                     <div
                                         class="border-1px-solid bg-light px-4 py-3 mb-3 d-flex align-items-center justify-content-between border-15px">
@@ -814,7 +798,7 @@
                             </div>
                         </div>
                         <div class="modal-footer">
-                            <button class="btn btn-primary waves-effect waves-light w-100"><i class="mdi mdi-printer font-size-16 align-middle me-2"></i> Print Receipt</button>
+                            <button class="btn btn-info waves-effect waves-light w-100"><i class="mdi mdi-printer font-size-16 align-middle me-2"></i> Print Bill</button>
                         </div>
 
                     </div>
@@ -943,8 +927,6 @@
                                                     <th>Served By</th>
                                                     <th class="text-right">Amount</th>
                                                     <th></th>
-                                                    
-                                                    
                                                 </tr>
                                             </thead>
                                             <tfoot class="table-light">
